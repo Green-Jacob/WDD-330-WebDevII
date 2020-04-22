@@ -1,0 +1,10 @@
+.container{ /* main body */
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to bottom right, green, blue);
+}
+
+.box-large{
+  display: flex;
+  background-color: rgba(230, 242, 255, 0.5);
+}
