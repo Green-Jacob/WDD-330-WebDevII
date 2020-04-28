@@ -17,13 +17,18 @@ function displayStory() {
   document.getElementById('story_display').innerHTML = storyHTML;
 }
 
-const quiz = [
-    ["What is Superman's real name?","Clark Kent"],
-    ["What is Wonder Woman's real name?","Diana Prince"],
-    ["What is Batman's real name?","Bruce Wayne"]
-];
+/*Start of Week 2*/
+var url = window.location.pathname;
+var filename = url.substring(url.lastIndexOf('/') + 1);
+console.log(filename);
+console.log((filename.localeCompare("examples_week2.html") == 0));
+if (filename.localeCompare("examples_week2.html") == 0) {
+  const quiz = [
+      ["What is Superman's real name?","Clark Kent"],
+      ["What is Wonder Woman's real name?","Diana Prince"],
+      ["What is Batman's real name?","Bruce Wayne"]
+  ];
 
-if (document.getElementById('header').value == "week2") { //Make sure it only runs on week 2
   function start(quiz){
       let score = 0;
       // main game loop
@@ -31,12 +36,14 @@ if (document.getElementById('header').value == "week2") { //Make sure it only ru
           const response = ask(question);
           check(response,answer);
       }
+
       // end of main game loop
       gameOver();
       // function declarations
       function ask(question){
           return prompt(question);
       }
+
       function check(response,answer){
           if(response === answer){
           alert('Correct!');
@@ -45,6 +52,7 @@ if (document.getElementById('header').value == "week2") { //Make sure it only ru
           alert(`Wrong! The correct answer was ${answer}`);
           }
       }
+
       function gameOver(){
           alert(`Game Over, you scored ${score} point${score !== 1 ? 's' : ''}`);
       }
