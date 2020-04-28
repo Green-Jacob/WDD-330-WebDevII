@@ -4,14 +4,26 @@
     <meta charset="utf-8">
     <title>Jacob Green Week 2</title>
     <link rel="stylesheet" href="../../master.css">
-    <script src="../../javascript/masterJS.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="header">
         <h1>Week 2 examples</h1><br>
     </div>
     <div class="container">
+      <h2>Quiz example should run in alerts first.</h2>
+      <div class="box-med">
+        <p>Simple MadLibs game</p>
+        <div id="prompt">
+          Prompt
+        </div>
+        <input type="word" id="input" value="">
+        <button type="button" id="add_to_list" onclick="getInput()">Add to list</button>
+        <button type="button" onclick="startMadLibs()">Restart</button>
+        <section id="result">
 
+        </section>
+      </div>
     </div><!-- end container -->
   </body>
+  <script src="../../javascript/masterJS.js" charset="utf-8"></script>
 </html>
