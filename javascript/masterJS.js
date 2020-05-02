@@ -1,5 +1,11 @@
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/') + 1);//checks the file name
+const quiz = [
+    ["How many living Apostles prefer their middle name?","2"],
+    ["What was President Nelson's occupation?","heart surgeon"],
+    ["How many new temples were announced in the April 2020 General Conference?","8"],
+    ["Which announced temple was a result of an invitation from the country's government?","Dubai"]
+];//for week 2 examples
 
 /*Start of week 1*/
 if (filename.localeCompare("examples.html") == 0) {
@@ -25,12 +31,6 @@ if (filename.localeCompare("examples.html") == 0) {
 
 /*Start of Week 2*/
 if (filename.localeCompare("examples_week2.html") == 0) {
-  const quiz = [
-      ["How many living Apostles prefer their middle name?","2"],
-      ["What was President Nelson's occupation?","heart surgeon"],
-      ["How many new temples were announced in the April 2020 General Conference?","8"],
-      ["Which announced temple was a result of an invitation from the country's government?","Dubai"]
-  ];
 
   function start(quiz){
       let score = 0;
@@ -60,7 +60,7 @@ if (filename.localeCompare("examples_week2.html") == 0) {
           alert(`Game Over, you scored ${score} point${score !== 1 ? 's' : ''}`);
       }
   }
-  start(quiz);
+
   //Mad libs machine example
 
   var words = [];
@@ -95,9 +95,9 @@ if (filename.localeCompare("examples_week2.html") == 0) {
   }
 
   function startMadLibs() {
+    i = 0;
     showNextPrompt();
     words = [];
-    i = 0;
   }
   startMadLibs();
   }
