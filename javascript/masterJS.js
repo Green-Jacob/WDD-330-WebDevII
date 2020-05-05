@@ -29,7 +29,7 @@ if (filename.localeCompare("examples.html") == 0) {
   }
 }
 
-/*Start of Week 2*/
+ /*Start of Week 2*/
 if (filename.localeCompare("examples_week2.html") == 0) {
 
   function start(quiz){
@@ -100,4 +100,10 @@ if (filename.localeCompare("examples_week2.html") == 0) {
     words = [];
   }
   startMadLibs();
-  }
+}//end of week 2
+
+ //Start of week 3
+if (filename.localeCompare("examples_week3.html") == 0)
+{
+  
+}//end of week 3
