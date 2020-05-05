@@ -44,6 +44,10 @@ body{
   font-size: 1.5rem;
 }
 
+a{
+  padding: 1.2rem;
+  font-size: 1.4em;
+}
 a:hover{
   color: red;
 }
