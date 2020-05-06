@@ -105,5 +105,59 @@ if (filename.localeCompare("examples_week2.html") == 0) {
  //Start of week 3
 if (filename.localeCompare("examples_week3.html") == 0)
 {
-  
+  //objects containing CSS values
+  const obj1 = {
+    color: 'red',
+    size: '2em',
+    font: 'cursive',
+    backgroundColor: 'Brown',
+    border: 'DarkGreen 3px solid'
+  }
+  const obj2 = {
+    color: 'IndianRed',
+    size: '2rem',
+    font: 'monospace',
+    backgroundColor: 'MediumOrchid',
+    border: 'Navy 10px groove'
+  }
+  const obj3 ={
+    color: 'MediumSpringGreen',
+    size: '12px',
+    font: 'sans=serif',
+    backgroundColor: '#66CDAA',
+    border: 'Khaki 5px dotted'
+  }
+  const obj4 ={
+    color: 'FA8072',
+    size: '25px',
+    font: 'sans=serif',
+    backgroundColor: 'rgb(240,248,255)',
+    border: 'Teal 7px dashed'
+  }
+
+  //array of the CSS objects
+  var objects = [obj1, obj2, obj3, obj4];
+  //returns an object from the array at random index
+  function randObj() {
+    let num = Math.floor(Math.random() * 4);
+    return objects[num];
+  }
+  //each CSS property is assigned a new value from a random object
+  function newStyle(element) {
+    element.style['color'] = randObj().color;
+    element.style['font-size'] = randObj().size;
+    element.style.fontFamily = randObj().font;
+    element.style.backgroundColor = randObj().backgroundColor;
+    element.style.border = randObj().border;
+    }
+  //eventListeners registered
+  document.getElementById('clickMe').addEventListener("click", function(){
+    newStyle(document.getElementById('clickMe'));
+  });
+  document.getElementById('doubleClickMe').addEventListener("dblclick", function(){
+    newStyle(document.getElementById('doubleClickMe'));
+  });
+  document.getElementById('mouseOverMe').addEventListener("mouseover", function(){
+    newStyle(document.getElementById('mouseOverMe'));
+  });
 }//end of week 3
