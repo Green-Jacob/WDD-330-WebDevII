@@ -161,3 +161,32 @@ if (filename.localeCompare("examples_week3.html") == 0)
     newStyle(document.getElementById('mouseOverMe'));
   });
 }//end of week 3
+
+//Start of week 4
+if (filename.localeCompare("examples_week4.html") == 0)
+{
+
+  var racers = [];
+  var i = 0;
+
+  function showRacers(){
+    let pList = "";
+    for (var i = 0; i < racers.length; i++) {
+      pList += racers[i].display();
+    }
+    document.getElementById("racerList").innerHTML = pList;
+  }
+
+  function addRacer() {
+    var form = document.getElementsByTagName('form')[0];
+    let racer = new Racer();
+    racer.name = form.racerName.value;
+    racer.gender = form.racerGender.value;
+    racer.race = form.race.value;
+    racer.idNum = 100 + i;
+    racers[i] = racer;
+    i++;
+    showRacers();
+  }
+  document.getElementById('addRacer').addEventListener('click', addRacer);
+}

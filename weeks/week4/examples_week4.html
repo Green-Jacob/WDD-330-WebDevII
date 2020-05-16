@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jacob Green Week 4</title>
+    <link rel="stylesheet" href="../../master.css">
+  </head>
+  <body>
+    <div id="header">
+        <h1>Week 4 examples</h1><br>
+    </div>
+    <div class="container">
+      <a href="../../index.html">Home</a>
+      <div class="box-med">
+        <h3>A simple form to add to a list of racers.</h3>
+      </div>
+      <div class="box-med">
+        <form action="">
+          Name: <input type="text" name="racerName" autofocus><br>
+          Gender: <select name="racerGender">
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+          </select><br>
+          <input type="radio" name="race" value="100 Meter" checked>
+          <label for="100 Meter">100 Meter</label>
+          <input type="radio" name="race" value="200 Meter">
+          <label for="200 Meter">200 Meter</label>
+          <input type="radio" name="race" value="400 Meter">
+          <label for="400 Meter">400 Meter</label><br>
+          <button type="button" id="addRacer">Add Racer</button>
+        </form>
+      </div>
+      <div class="box-med">
+        <section id="racerList">
+
+        </section>
+      </div>
+    </div><!-- end container -->
+  </body>
+  <script src="../../javascript/modules/racer.js" charset="utf-8"></script>
+  <script src="../../javascript/masterJS.js" charset="utf-8"></script>
+</html>
