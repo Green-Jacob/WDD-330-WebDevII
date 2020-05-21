@@ -1,6 +1,6 @@
-import * from "./modules/ToDos.js";
-import * from "./modules/ls.js";
-import * from "./modules/utilities.js";
+import listItem from "./modules/ToDos.js";
+import storageManager from "./modules/ls.js";
+import util from "./modules/utilities.js";
 
 var utility = new util;
 
