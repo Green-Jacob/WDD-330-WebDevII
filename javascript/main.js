@@ -3,11 +3,8 @@ import storageManager from "./modules/ls.js"
 import util from "./modules/utilities.js"
 
 var utility = new util
-
-function tryClass() {
-  var lI = new listItem(12, "Hello World!", true)
-  console.log(lI)
-}
+var lI = new listItem(12, "Hello World!", true)
+console.log(lI)
 
 function showList() {
   var listArea = document.getElementById('listArea')
