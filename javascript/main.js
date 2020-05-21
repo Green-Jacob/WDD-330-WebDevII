@@ -1,5 +1,8 @@
 import listItem from "./modules/ToDos.js";
 import storageManager from "./modules/ls.js";
+import util from "./modules/utilities.js";
+
+var utility = new util;
 
 function tryClass() {
   var lI = new listItem(12, "Hello World!", true);
@@ -16,6 +19,10 @@ function showList() {
   listArea.innerHTML = list;
   var buttons = document.getElementsByName('delete');
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', deleteItem)
+    buttons[i].addEventListener('click', utility.deleteItem)
+  }
+  var checkboxes = document.getElementsByName('done');
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener('click', utility.checkItem)
   }
 }

@@ -1,3 +1,8 @@
-function deleteItem() {
-  console.log("Working!");
+export default class util{
+  deleteItem() {
+    console.log("Button working!");
+  }
+  checkItem(){
+    console.log("Check working!");
+  }
 }
