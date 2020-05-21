@@ -27,4 +27,4 @@ function showList() {
   }
 }
 
-showList();
+document.getElementById('testButton').addEventListener("click", showList);
