@@ -1,4 +1,4 @@
-import listItem as listItem from "./modules/ToDos.js";
+import listItem from "./modules/ToDos.js";
 import storageManager from "./modules/ls.js";
 import util from "./modules/utilities.js";
 
