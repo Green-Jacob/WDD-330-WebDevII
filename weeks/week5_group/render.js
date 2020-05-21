@@ -1,8 +1,8 @@
+const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 export default class Render {
   constructor(){
 
   }
-  const imgBasePath = "//byui-cit.github.io/cit261/examples/";
   renderOneHike(hike) {
     const item = document.createElement("li");
 
