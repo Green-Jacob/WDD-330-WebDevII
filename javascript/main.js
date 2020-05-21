@@ -1,3 +1,11 @@
+class listItem {
+  constructor(i, c, complete) {
+    this.idNum = i;
+    this.content = c;
+    this.completed = complete;
+  }
+}
+
 import listItem from "./modules/ToDos.js"
 import storageManager from "./modules/ls.js"
 import util from "./modules/utilities.js"
