@@ -23,5 +23,3 @@ function showList() {
     checkboxes[i].addEventListener('click', utility.checkItem)
   }
 }
-
-export{tryClass, showList};
