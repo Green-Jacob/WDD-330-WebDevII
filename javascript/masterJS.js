@@ -189,4 +189,9 @@ if (filename.localeCompare("examples_week4.html") == 0)
     showRacers();
   }
   document.getElementById('addRacer').addEventListener('click', addRacer);
+}//end week 4
+
+//begin week 5
+if (filename.localeCompare("examples_week5.html") == 0){
+  var storage = new storageManager;
 }

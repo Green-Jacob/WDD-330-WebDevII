@@ -1,6 +1,5 @@
 body{
-  background-image: linear-gradient(to bottom right, green, #b3fff0);
-  background-repeat: no-repeat;
+  height: 100vh;
 };
 
 .container{ /* main body */
@@ -18,23 +17,28 @@ body{
 }
 
 .box-large{
+  background-image: linear-gradient(to bottom right, green, #b3fff0);
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 60%;
-  padding-left: 50%;
+  padding-left: 15%;
   background-color: rgba(230, 242, 255, 0.5);
   border: 3px ridge #cce6ff;
   border-radius: 5px;
 }
 
 .box-med{
+  background-image: linear-gradient(to bottom right, green, #b3fff0);
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 60%;
+  max-width: 75%;
   margin-left: 10%;
   padding-left: 5%;
+  padding-bottom: 25px;
   border: 2px groove #cce6ff;
   border-radius: 5px;
   background-color: rgba(230, 242, 255, 0.5);
@@ -56,4 +60,45 @@ a:visited{
 }
 a{
   color: green;
+}
+
+h1{
+  text-align: center;
+}
+
+footer{
+  height:auto;
+  width: 100%;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  position: fixed;
+  bottom: 0pt;
+  left: 0pt;
+}
+
+.footer-contents{
+  background-image: linear-gradient(to bottom right, green, #b3fff0);
+  background-attachment: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 95%;
+  border: 2px groove #cce6ff;
+  border-radius: 5px;
+  background-color: rgba(230, 242, 255, 0.3);
+  height:24px;
+  width: 1000px;
+  margin:auto;
+}
+
+.todo-item{
+  position: relative;
+}
+
+.todo-item > button{
+  position: absolute;
+  right: 0;
 }
