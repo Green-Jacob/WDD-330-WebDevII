@@ -3,8 +3,11 @@ import storageManager from "./modules/ls.js"
 import util from "./modules/utilities.js"
 
 var utility = new util
-var lI = new listItem(12, "Hello World!", true)
-console.log(lI)
+
+function tryClass() {
+  var lI = new listItem(12, "Hello World!", true)
+  console.log(lI)
+}
 
 function showList() {
   var listArea = document.getElementById('listArea')
@@ -23,3 +26,5 @@ function showList() {
     checkboxes[i].addEventListener('click', utility.checkItem)
   }
 }
+
+showList();
