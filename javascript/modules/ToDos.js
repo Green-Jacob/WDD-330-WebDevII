@@ -1,4 +1,4 @@
-export class listItem {
+export default class listItem {
   constructor(i, c, complete) {
     this.idNum = i;
     this.content = c;
