@@ -193,5 +193,14 @@ if (filename.localeCompare("examples_week4.html") == 0)
 
 //begin week 5
 if (filename.localeCompare("examples_week5.html") == 0){
-  var storage = new storageManager;
+  console.log("This is a log.");
+  var string = "This is a string variable passed to console."
+  console.log(string);
+  console.log("Now call the function testDebug()");
+  function testDebug() {
+    var i = Math.floor(Math.random() * 100);
+    //now check the variable then continue
+    debugger;
+    console.log(i);
+  }
 }
