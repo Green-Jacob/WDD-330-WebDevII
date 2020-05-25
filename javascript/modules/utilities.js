@@ -8,18 +8,19 @@ export default class util{
 
   stringify(list) {
     var s = "";
-    forEach((list, i) => {
+    for (var i = 0; i < list.length; i++) {
+      var li = list[i];
       s += '<section class="todo-item">'
       s += '<input type="checkbox" name="done" value=""'
-      if (i.completed == false) {
+      if (li.completed == false) {
         s += '>'
       }
       else {
         s += 'checked>'
       }
-      s += i.content;
+      s += li.content;
       s += '<button type="button" name="delete">X</button><hr><br></section>'
-    });
+    }
     return s;
   }
 }
