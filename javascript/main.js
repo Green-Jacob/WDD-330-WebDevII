@@ -2,7 +2,8 @@ import listItem from "./modules/ToDos.js"
 import storageManager from "./modules/ls.js"
 import util from "./modules/utilities.js"
 
-var utility = new util
+var utility = new util;
+var masterList = [];
 
 function tryClass() {
   var lI = new listItem(12, "Hello World!", true)
@@ -27,4 +28,10 @@ function showList() {
   }
 }
 
-document.getElementById('testButton').addEventListener("click", showList);
+function addItem() {
+  var contents = document.getElementById('newTask').value;
+  var item = new listItem(Date.now(), contents, false);
+  masterList.push(item);
+}
+
+document.getElementById('addItem').addEventListener("click", addItem);
