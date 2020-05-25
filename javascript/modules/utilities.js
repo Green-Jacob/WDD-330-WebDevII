@@ -6,7 +6,7 @@ export default class util{
     console.log("Check working!");
   }
 
-  stringify(var list) {
+  stringify(list) {
     var s = "";
     forEach((list, i) => {
       s += '<section class="todo-item">'
