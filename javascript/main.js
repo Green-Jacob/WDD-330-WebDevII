@@ -32,4 +32,5 @@ function addItem() {
   var contents = document.getElementById('newTask').value;
   var item = new listItem(Date.now(), contents, false);
   masterList.push(item);
+  console.log(masterList);// DEBUG: 
 }
