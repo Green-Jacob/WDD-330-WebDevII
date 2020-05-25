@@ -12,7 +12,7 @@ export default class util{
       var li = list[i];
       s += '<section class="todo-item">'
       s += '<input type="checkbox" name="done"'
-      s += ' value="' + li.idNum '"'
+      s += ' value="' + li.idNum + '"'
       if (li.completed == false) {
         s += '>'
       }
