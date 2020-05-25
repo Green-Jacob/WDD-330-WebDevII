@@ -33,5 +33,3 @@ function addItem() {
   var item = new listItem(Date.now(), contents, false);
   masterList.push(item);
 }
-
-document.getElementById('addItem').addEventListener("click", addItem);
