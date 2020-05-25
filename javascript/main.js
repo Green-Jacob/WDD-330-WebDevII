@@ -13,7 +13,6 @@ function tryClass() {
 function showList() {
   var listArea = document.getElementById('listArea')
   listArea.innerHTML = utility.stringify(masterList);
-  listArea.innerHTML = list;
   var buttons = document.getElementsByName('delete')
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', utility.deleteItem)
