@@ -20,7 +20,9 @@ export default class util{
         s += 'checked>'
       }
       s += li.content;
-      s += '<button type="button" name="delete">X</button><hr><br></section>'
+      s += '<button type="button" name="delete"'
+      s += ' value="' + li.idNum + '"'
+      s += '>X</button><hr><br></section>'
     }
     return s;
   }
