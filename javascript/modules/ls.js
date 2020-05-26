@@ -14,7 +14,8 @@ export default class storageManager {
     var list = [];
     var string = localStorage.getItem(key)
     var res = string.split("}");
-    if (res.length > 0) {
+    console.log(res);
+    if (!false) {
       for (var i = 0; i < res.length; i++) {
         let li = new listItem;
         let obj = JSON.parse(res[i].concat("}"));
