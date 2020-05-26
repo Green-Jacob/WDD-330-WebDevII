@@ -7,13 +7,14 @@ export default class storageManager {
         string += JSON.stringify(value[i]);
       }
     }
+    console.log(string);
     window.localStorage.setItem(key, string);
   }
   get(key) {
     var list = [];
     var string = window.localStorage.getItem(key)
-    var obj = JSON.parse(string);
-    console.log(obj);
+    //var obj = JSON.parse(string);
+    //console.log(obj);
     return (list);
   }
 }
