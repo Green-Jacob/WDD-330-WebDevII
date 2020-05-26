@@ -13,8 +13,16 @@ export default class storageManager {
   get(key) {
     var list = [];
     var string = localStorage.getItem(key)
-    var obj = JSON.parse(string);
-    //console.log(obj);
+    var res = string.split("}");
+    for (var i = 0; i < res.length; i++) {
+      res[i].concat("}");
+      let li = new listItem;
+      let obj = JSON.parse(res[i]);
+      li.idNum = obj.idNum;
+      li.content = obj.content;
+      li.completed = obj.completed;
+      list.push(li);
+    }
     return (list);
   }
 }
