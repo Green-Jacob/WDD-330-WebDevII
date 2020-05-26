@@ -14,7 +14,7 @@ export default class storageManager {
     var list = [];
     var string = localStorage.getItem(key)
     var res = string.split("}");
-    console.log(res);
+    console.log(res[0].concat("}"));
     if (!false) {
       for (var i = 0; i < res.length; i++) {
         let li = new listItem;
