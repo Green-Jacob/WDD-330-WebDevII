@@ -19,12 +19,14 @@ export default class storageManager {
       for (var i = 0; i < res.length; i++) {
         var str = (res[i] + "}");
         debugger
-        let li = new listItem;
-        let obj = JSON.parse(str);
-        li.idNum = obj.idNum;
-        li.content = obj.content;
-        li.completed = obj.completed;
-        list.push(li);
+        if (str != "}") {
+          let li = new listItem;
+          let obj = JSON.parse(str);
+          li.idNum = obj.idNum;
+          li.content = obj.content;
+          li.completed = obj.completed;
+          list.push(li);
+        }
       }
       return (list);
     }
