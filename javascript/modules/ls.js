@@ -12,9 +12,9 @@ export default class storageManager {
   }
   get(key) {
     var list = [];
-    if (localStorage.getItem(key)) {
-      var string = localStorage.getItem(key)
-      var res = string.split("}");
+    var string = localStorage.getItem(key)
+    var res = string.split("}");
+    if (res.length > 0) {
       for (var i = 0; i < res.length; i++) {
         let li = new listItem;
         let obj = JSON.parse(res[i].concat("}"));
