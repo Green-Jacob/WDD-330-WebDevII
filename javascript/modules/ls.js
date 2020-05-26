@@ -4,6 +4,7 @@ export default class storageManager {
   }
   get(key) {
     var string = window.localStorage.getItem(key)
-    return (JSON.parse(string));
+    console.log(string);
+    return (string);
   }
 }
