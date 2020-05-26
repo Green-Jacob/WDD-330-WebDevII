@@ -8,11 +8,11 @@ export default class storageManager {
       }
     }
     console.log(string);
-    window.localStorage.setItem(key, string);
+    localStorage.setItem(key, string);
   }
   get(key) {
     var list = [];
-    var string = window.localStorage.getItem(key)
+    var string = localStorage.getItem(key)
     //var obj = JSON.parse(string);
     //console.log(obj);
     return (list);
