@@ -35,5 +35,4 @@ function getList() {
   }
 }
 
-document.getElementsByTagName('body').addEventListener("load", getList());
 document.getElementById('addItem').addEventListener("click", addItem)
