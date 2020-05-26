@@ -7,14 +7,12 @@ export default class storageManager {
         string += JSON.stringify(value[i]);
       }
     }
-    console.log(string);
     localStorage.setItem(key, string);
   }
   get(key) {
     var list = [];
     var string = localStorage.getItem(key)
     var res = string.split("}");
-    console.log(res[0].concat("}"));
     if (!false) {
       for (var i = 0; i < res.length; i++) {
         var str = (res[i] + "}");

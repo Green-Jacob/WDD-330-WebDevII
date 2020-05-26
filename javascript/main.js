@@ -26,7 +26,6 @@ function getList() {
   if (storage.get(ListName) != null) {
     masterList = storage.get(ListName);
     showList();
-    console.log(masterList);
   }
 }
 function saveList() {
@@ -37,7 +36,6 @@ function addItem() {
   var contents = document.getElementById('newTask').value;
   var item = new listItem(Date.now(), contents, false);
   masterList.push(item);
-  console.log(masterList);// DEBUG:
   showList();
   saveList();
 }
