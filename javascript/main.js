@@ -3,6 +3,8 @@ import storageManager from "./modules/ls.js"
 import util from "./modules/utilities.js"
 
 var utility = new util;
+var storage = new storageManager;
+console.log(storage.get("test"));
 var masterList = [];
 
 function tryClass() {
