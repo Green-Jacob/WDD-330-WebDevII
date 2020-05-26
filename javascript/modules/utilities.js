@@ -10,6 +10,9 @@ export default class util{
     var s = "";
     for (var i = 0; i < list.length; i++) {
       var li = list[i];
+      if (li.idNum == undefined) {
+        continue;
+      }
       s += '<section class="todo-item">'
       s += '<input type="checkbox" name="done"'
       s += ' value="' + li.idNum + '"'
