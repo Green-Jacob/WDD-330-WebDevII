@@ -1,7 +1,13 @@
 import listItem from "./ToDos.js"
 export default class storageManager {
   put(key, value) {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    var string = "";
+    if (Array(value)) {
+      forEach((value, i) => {
+        string += JSON.stringify(i);
+      });
+    }
+    window.localStorage.setItem(key, string);
   }
   get(key) {
     var list = [];
