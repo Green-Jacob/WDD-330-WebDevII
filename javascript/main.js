@@ -13,7 +13,7 @@ function showList() {
   var buttons = document.getElementsByName('delete')
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(){
-      utility.deleteItem(this.value);
+      utility.deleteItem(this.value, masterList);
     });
   }
   var checkboxes = document.getElementsByName('done');
