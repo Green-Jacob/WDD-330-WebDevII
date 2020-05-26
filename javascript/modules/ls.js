@@ -13,7 +13,7 @@ export default class storageManager {
   get(key) {
     var list = [];
     var string = localStorage.getItem(key)
-    //var obj = JSON.parse(string);
+    var obj = JSON.parse(string);
     //console.log(obj);
     return (list);
   }
