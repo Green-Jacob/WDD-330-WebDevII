@@ -12,7 +12,9 @@ function showList() {
   listArea.innerHTML = utility.stringify(masterList);
   var buttons = document.getElementsByName('delete')
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', utility.deleteItem)
+    buttons[i].addEventListener('click', function(){
+      utility.deleteItem(this.value);
+    });
   }
   var checkboxes = document.getElementsByName('done');
   for (var i = 0; i < checkboxes.length; i++) {

@@ -18,7 +18,6 @@ export default class storageManager {
     if (!false) {
       for (var i = 0; i < res.length; i++) {
         var str = (res[i] + "}");
-        debugger
         if (str != "}") {
           let li = new listItem;
           let obj = JSON.parse(str);
