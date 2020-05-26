@@ -4,13 +4,8 @@ import util from "./modules/utilities.js"
 
 var utility = new util;
 var storage = new storageManager;
-console.log(storage.get("test"));
+const ListName = "TodoList";
 var masterList = [];
-
-function tryClass() {
-  var lI = new listItem(12, "Hello World!", true)
-  console.log(lI)
-}
 
 function showList() {
   var listArea = document.getElementById('listArea')
@@ -33,4 +28,12 @@ function addItem() {
   showList();
 }
 
+function getList() {
+  if (storage.get(ListName) != null) {
+    masterList = storage.get(ListName);
+    showList();
+  }
+}
+
+document.getElementsByName('body').addEventListener("load", getList());
 document.getElementById('addItem').addEventListener("click", addItem)
