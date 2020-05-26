@@ -34,5 +34,5 @@ function getList() {
     showList();
   }
 }
-
+document.body.addEventListener("load", getList())
 document.getElementById('addItem').addEventListener("click", addItem)
