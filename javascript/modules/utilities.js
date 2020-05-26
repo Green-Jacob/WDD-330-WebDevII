@@ -1,7 +1,8 @@
 import listItem from "./ToDos.js"
 export default class util{
-  deleteItem(id) {
+  deleteItem(id, list) {
     console.log(id);
+    return list;
   }
   checkItem(){
     console.log("Check working!");
