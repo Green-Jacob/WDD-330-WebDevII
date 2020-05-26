@@ -3,9 +3,9 @@ export default class storageManager {
   put(key, value) {
     var string = "";
     if (Array(value)) {
-      forEach((value, i) => {
-        string += JSON.stringify(i);
-      });
+      for (var i = 0; i < value.length; i++) {
+        string += JSON.stringify(value[i]);
+      }
     }
     window.localStorage.setItem(key, string);
   }
