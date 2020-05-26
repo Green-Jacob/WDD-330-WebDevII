@@ -20,7 +20,7 @@ export default class storageManager {
         var str = (res[i] + "}");
         debugger
         let li = new listItem;
-        let obj = JSON.parse(str[i].concat("}"));
+        let obj = JSON.parse(str);
         li.idNum = obj.idNum;
         li.content = obj.content;
         li.completed = obj.completed;
