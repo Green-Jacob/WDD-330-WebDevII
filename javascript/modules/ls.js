@@ -14,7 +14,7 @@ export default class storageManager {
       if (key == "content") {
         li.content = value;
       }
-      if (key == completed) {
+      if (key == "completed") {
         li.completed = value;
       }
       list.push(li)
