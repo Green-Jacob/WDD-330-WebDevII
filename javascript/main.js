@@ -20,19 +20,24 @@ function showList() {
   }
 }
 
-function addItem() {
-  var contents = document.getElementById('newTask').value;
-  var item = new listItem(Date.now(), contents, false);
-  masterList.push(item);
-  console.log(masterList);// DEBUG:
-  showList();
-}
-
 function getList() {
   if (storage.get(ListName) != null) {
     masterList = storage.get(ListName);
     showList();
   }
 }
+function saveList() {
+  storage.put(ListName, masterList);
+}
+
+function addItem() {
+  var contents = document.getElementById('newTask').value;
+  var item = new listItem(Date.now(), contents, false);
+  masterList.push(item);
+  console.log(masterList);// DEBUG:
+  showList();
+  saveList();
+}
 document.body.addEventListener("load", getList())
+document.body.addEventListener("unload", saveList())
 document.getElementById('addItem').addEventListener("click", addItem)
