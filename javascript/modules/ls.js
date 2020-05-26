@@ -3,6 +3,7 @@ export default class storageManager {
     window.localStorage.setItem(key, JSON.stringify(value));
   }
   get(key) {
-    return (JSON.parse(window.localStorage.getItem(key)));
+    var string = window.localStorage.getItem(key)
+    return (JSON.parse(string));
   }
 }
