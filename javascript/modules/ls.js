@@ -1,4 +1,4 @@
-import listItem from "./modules/ToDos.js"
+import listItem from "./ToDos.js"
 export default class storageManager {
   put(key, value) {
     window.localStorage.setItem(key, JSON.stringify(value));
