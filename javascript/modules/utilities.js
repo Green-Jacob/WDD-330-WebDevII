@@ -1,6 +1,6 @@
 export default class util{
   deleteItem(id) {
-    console.log("Button working!");
+    console.log(id);
   }
   checkItem(){
     console.log("Check working!");
