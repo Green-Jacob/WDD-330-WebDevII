@@ -11,7 +11,7 @@ export default class util{
   checkItem(id, list){
     for (var i = 0; i < list.length; i++) {
       if (list[i].idNum == id) {
-        list[i].completed = true;
+        list[i].completed ? false : true;
       }
     }
     return list;
