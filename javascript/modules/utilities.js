@@ -1,5 +1,20 @@
 import listItem from "./ToDos.js"
 export default class util{
+  countTodo(list)
+  {
+    var count = 0;
+    for (var i = 0; i < list.length; i++)
+    {
+      if (list[i].completed != undefined)
+      {
+        if (list[i].completed == false) {
+          count++;
+        }
+      }
+    }
+    return count;
+  }
+
   deleteItem(id, list) {
     for (var i = 0; i < list.length; i++) {
       if (list[i].idNum == id) {
