@@ -39,6 +39,7 @@ function showList() {
   var listArea = document.getElementById('listArea')
   listArea.innerHTML = utility.stringify(masterList);
   bindItems();
+  document.getElementById('number_left').innerHTML = utility.countTodo();
 }
 
 function getList() {

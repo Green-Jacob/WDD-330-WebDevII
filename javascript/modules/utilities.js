@@ -12,7 +12,8 @@ export default class util{
         }
       }
     }
-    return count;
+    var string = count + " tasks left"
+    return string;
   }
 
   deleteItem(id, list) {
