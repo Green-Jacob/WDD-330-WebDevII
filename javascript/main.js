@@ -20,7 +20,11 @@ function showList() {
   }
   var checkboxes = document.getElementsByName('done');
   for (var i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].addEventListener('click', utility.checkItem)
+    checkboxes[i].addEventListener('click', function(){
+      masterList = utility.checkItem(this.value, masterList);
+      showList();
+      saveList();
+    });
   }
 }
 
