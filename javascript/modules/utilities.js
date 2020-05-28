@@ -12,7 +12,18 @@ export default class util{
         }
       }
     }
-    var string = count + " tasks left"
+    var string = count;
+    if (count < 0) {
+      string = "No tasks left"
+    }
+    else if (count > 1)
+    {
+      string += " tasks left"
+    }
+    else
+    {
+      string += "task left"
+    }
     return string;
   }
 
