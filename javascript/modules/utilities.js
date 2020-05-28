@@ -22,7 +22,7 @@ export default class util{
     }
     else
     {
-      string += "task left"
+      string += " task left "
     }
     return string;
   }
