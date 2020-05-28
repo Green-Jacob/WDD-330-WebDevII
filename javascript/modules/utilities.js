@@ -35,14 +35,18 @@ export default class util{
       s += ' value="' + li.idNum + '"'
       if (li.completed == false) {
         s += '>'
+        s += li.content;
+        s += '<button type="button" name="delete"'
+        s += ' value="' + li.idNum + '"'
+        s += '>X</button><hr><br></section>'
       }
       else {
-        s += 'checked>'
+        s += 'checked><s>'
+        s += li.content;
+        s += '</s><button type="button" name="delete"'
+        s += ' value="' + li.idNum + '"'
+        s += '>X</button><hr><br></section>'
       }
-      s += li.content;
-      s += '<button type="button" name="delete"'
-      s += ' value="' + li.idNum + '"'
-      s += '>X</button><hr><br></section>'
     }
     return s;
   }
