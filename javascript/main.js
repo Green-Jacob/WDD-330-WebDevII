@@ -7,11 +7,10 @@ var storage = new storageManager;
 const ListName = "TodoList";
 var masterList = [];
 
-function showList() {
-  var listArea = document.getElementById('listArea')
-  listArea.innerHTML = utility.stringify(masterList);
+function bindItems() {
   var buttons = document.getElementsByName('delete')
-  for (var i = 0; i < buttons.length; i++) {
+  for (var i = 0; i < buttons.length; i++)
+  {
     buttons[i].addEventListener('click', function(){
       masterList = utility.deleteItem(this.value, masterList);
       showList();
@@ -19,13 +18,27 @@ function showList() {
     });
   }
   var checkboxes = document.getElementsByName('done');
-  for (var i = 0; i < checkboxes.length; i++) {
+  for (var i = 0; i < checkboxes.length; i++)
+  {
     checkboxes[i].addEventListener('click', function(){
       masterList = utility.checkItem(this.value, masterList);
       showList();
       saveList();
     });
   }
+}
+
+function showFilteredList(list)
+{
+  var listArea = document.getElementById('listArea')
+  listArea.innerHTML = utility.stringify(list);
+  bindItems();
+}
+
+function showList() {
+  var listArea = document.getElementById('listArea')
+  listArea.innerHTML = utility.stringify(masterList);
+  bindItems();
 }
 
 function getList() {
