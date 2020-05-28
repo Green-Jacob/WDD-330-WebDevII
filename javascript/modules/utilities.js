@@ -13,7 +13,7 @@ export default class util{
       }
     }
     var string = count;
-    if (count < 0) {
+    if (count <= 0) {
       string = "No tasks left"
     }
     else if (count > 1)
