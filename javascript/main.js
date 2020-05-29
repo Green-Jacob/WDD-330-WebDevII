@@ -28,18 +28,11 @@ function bindItems() {
   }
 }
 
-function showFilteredList(list)
-{
+function showList(list = masterList) {
   var listArea = document.getElementById('listArea')
   listArea.innerHTML = utility.stringify(list);
   bindItems();
-}
-
-function showList() {
-  var listArea = document.getElementById('listArea')
-  listArea.innerHTML = utility.stringify(masterList);
-  bindItems();
-  document.getElementById('number_left').innerHTML = utility.countTodo(masterList);
+  document.getElementById('number_left').innerHTML = utility.countTodo(list);
 }
 
 function getList() {
