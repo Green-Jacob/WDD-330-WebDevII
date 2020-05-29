@@ -105,8 +105,9 @@ footer{
 }
 
 .todo-item > checkbox{
-  min-width: inherit;
-  min-height: inherit;
+  margin-right: .5rem;
+  min-width: 25px;
+  min-height: 25px;
 }
 
 .interface{
