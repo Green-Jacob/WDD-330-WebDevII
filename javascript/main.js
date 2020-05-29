@@ -49,7 +49,7 @@ function addItem() {
   var contents = document.getElementById('newTask').value;
   var item = new listItem(Date.now(), contents, false);
   masterList.push(item);
-  showList();
+  showList(masterList);
   saveList();
 }
 document.body.addEventListener("load", getList())
