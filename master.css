@@ -89,12 +89,12 @@ footer{
   border: 2px groove #cce6ff;
   border-radius: 5px;
   background-color: rgba(230, 242, 255, 0.3);
-  height:35px;
+  height:40px;
   width: 1000px;
   margin:auto;
 }
 
-.add-item-form{
+.add-item-form > input{
   height: 100%;
 }
 
