@@ -61,4 +61,6 @@ document.getElementById('all').addEventListener("click", function(){
 document.getElementById('active').addEventListener("click", function(){
   showList(utility.filterActive(masterList));
 });
-document.getElementById('completed').addEventListener("click", showList)
+document.getElementById('completed').addEventListener("click", function(){
+  showList(utility.filterCompleted(masterList));
+});
