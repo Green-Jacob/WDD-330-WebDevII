@@ -96,11 +96,17 @@ footer{
 
 .todo-item{
   position: relative;
+  font-size: 1.25em;
 }
 
 .todo-item > button{
   position: absolute;
   right: 0;
+}
+
+.todo-item > checkbox{
+  min-width: inherit;
+  min-height: inherit;
 }
 
 .interface{
