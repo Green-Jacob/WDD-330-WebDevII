@@ -94,6 +94,10 @@ footer{
   margin:auto;
 }
 
+.add-item-form{
+  height: 100%;
+}
+
 .todo-item{
   position: relative;
   font-size: 1.25em;
