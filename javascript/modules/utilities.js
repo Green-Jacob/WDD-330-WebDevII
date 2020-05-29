@@ -1,5 +1,6 @@
 import listItem from "./ToDos.js"
 export default class util{
+  // counts the incomplete items
   countTodo(list)
   {
     var count = 0;
@@ -27,6 +28,7 @@ export default class util{
     return string;
   }
 
+//removes an item by making it a blank todo object
   deleteItem(id, list) {
     for (var i = 0; i < list.length; i++) {
       if (list[i].idNum == id) {
@@ -35,6 +37,8 @@ export default class util{
     }
     return list;
   }
+
+//sets the todo items completed bool
   checkItem(id, list){
     for (var i = 0; i < list.length; i++) {
       if (list[i].idNum == id) {
@@ -50,6 +54,7 @@ export default class util{
     return list;
   }
 
+//returns a string loaded with HTML elements from the passed array
   stringify(list) {
     var s = "";
     for (var i = 0; i < list.length; i++) {
@@ -77,6 +82,8 @@ export default class util{
     }
     return s;
   }
+
+//returns an array of incomplete items
   filterActive(list) {
     var filtered = [];
     var fIndex = 0;
@@ -92,6 +99,8 @@ export default class util{
     }
     return filtered;
   }
+
+//returns an array of completed items
   filterCompleted(list) {
     var filtered = [];
     var fIndex = 0;

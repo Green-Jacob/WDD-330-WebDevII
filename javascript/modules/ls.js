@@ -1,5 +1,7 @@
 import listItem from "./ToDos.js"
 export default class storageManager {
+
+//puts the item into local storage
   put(key, value) {
     var string = "";
     if (Array(value)) {
@@ -9,6 +11,8 @@ export default class storageManager {
     }
     localStorage.setItem(key, string);
   }
+
+//gets an item from local storage
   get(key) {
     var list = [];
     var string = localStorage.getItem(key)

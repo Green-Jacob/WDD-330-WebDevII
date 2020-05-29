@@ -1,3 +1,4 @@
+//todo item class
 export default class listItem {
   constructor(i, c, complete) {
     this.idNum = i;

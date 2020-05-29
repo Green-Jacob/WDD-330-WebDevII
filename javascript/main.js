@@ -7,6 +7,7 @@ var storage = new storageManager;
 const ListName = "TodoList";
 var masterList = [];
 
+//connects the generated buttons and checkboxes to funcitons
 function bindItems() {
   var buttons = document.getElementsByName('delete')
   for (var i = 0; i < buttons.length; i++)
@@ -28,6 +29,7 @@ function bindItems() {
   }
 }
 
+//displays the passed list
 function showList(list) {
   var listArea = document.getElementById('listArea')
   listArea.innerHTML = utility.stringify(list);
@@ -35,16 +37,20 @@ function showList(list) {
   document.getElementById('number_left').innerHTML = utility.countTodo(list);
 }
 
+//retrieves list from storage
 function getList() {
   if (storage.get(ListName) != null) {
     masterList = storage.get(ListName);
     showList(masterList);
   }
 }
+
+//saves list to storage
 function saveList() {
   storage.put(ListName, masterList);
 }
 
+//adds a todo item to the list
 function addItem() {
   var contents = document.getElementById('newTask').value;
   var item = new listItem(Date.now(), contents, false);
@@ -52,6 +58,8 @@ function addItem() {
   showList(masterList);
   saveList();
 }
+
+//event listeners for the document
 document.body.addEventListener("load", getList())
 document.body.addEventListener("unload", saveList())
 document.getElementById('addItem').addEventListener("click", addItem)
