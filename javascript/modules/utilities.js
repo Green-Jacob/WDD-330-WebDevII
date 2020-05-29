@@ -92,7 +92,7 @@ export default class util{
     }
     return filtered;
   }
-  filterActive(list) {
+  filterCompleted(list) {
     var filtered = [];
     var fIndex = 0;
     for (var i = 0; i < list.length; i++) {
