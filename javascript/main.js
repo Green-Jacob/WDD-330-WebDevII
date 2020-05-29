@@ -28,7 +28,7 @@ function bindItems() {
   }
 }
 
-function showList(list = masterList) {
+function showList(list) {
   var listArea = document.getElementById('listArea')
   listArea.innerHTML = utility.stringify(list);
   bindItems();
@@ -55,7 +55,9 @@ function addItem() {
 document.body.addEventListener("load", getList())
 document.body.addEventListener("unload", saveList())
 document.getElementById('addItem').addEventListener("click", addItem)
-document.getElementById('all').addEventListener("click", showList)
+document.getElementById('all').addEventListener("click", function(){
+  showList(masterList);
+});
 document.getElementById('active').addEventListener("click", function(){
   showList(utility.filterActive(masterList));
 });
