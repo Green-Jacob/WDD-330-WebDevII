@@ -77,4 +77,19 @@ export default class util{
     }
     return s;
   }
+  filterActive(list) {
+    filtered = [];
+    fIndex = 0;
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].completed != undefined)
+      {
+        if (list[i].completed == false)
+        {
+          filtered[fIndex] = list[i];
+          fIndex++;
+        }
+      }
+    }
+  }
+  return filtered;
 }
