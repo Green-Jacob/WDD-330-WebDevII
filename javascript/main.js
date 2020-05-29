@@ -38,7 +38,7 @@ function showList(list) {
 function getList() {
   if (storage.get(ListName) != null) {
     masterList = storage.get(ListName);
-    showList();
+    showList(masterList);
   }
 }
 function saveList() {
