@@ -13,7 +13,7 @@ function bindItems() {
   {
     buttons[i].addEventListener('click', function(){
       masterList = utility.deleteItem(this.value, masterList);
-      showList();
+      showList(masterList);
       saveList();
     });
   }
@@ -22,7 +22,7 @@ function bindItems() {
   {
     checkboxes[i].addEventListener('click', function(){
       masterList = utility.checkItem(this.value, masterList);
-      showList();
+      showList(masterList);
       saveList();
     });
   }
