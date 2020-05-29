@@ -90,6 +90,6 @@ export default class util{
         }
       }
     }
+    return filtered;
   }
-  return filtered;
 }
