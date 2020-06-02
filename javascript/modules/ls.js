@@ -32,7 +32,10 @@ export default class storageManager {
       return (list);
     }
     else {
-      return "";
+      var emptyList = [];
+      let newLi = new listItem;
+      emptyList.push(newLi);
+      return emptyList;
     }
   }
 }
