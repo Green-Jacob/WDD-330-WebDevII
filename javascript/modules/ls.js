@@ -16,12 +16,8 @@ export default class storageManager {
   get(key) {
     var list = [];
     var string = localStorage.getItem(key)
-    if (string == null)
-    {
-      return "";
-    }
     var res = string.split("}");
-    if (!false) {
+    if (string != null) {
       for (var i = 0; i < res.length; i++) {
         var str = (res[i] + "}");
         if (str != "}") {
@@ -34,6 +30,9 @@ export default class storageManager {
         }
       }
       return (list);
+    }
+    else {
+      return "";
     }
   }
 }
