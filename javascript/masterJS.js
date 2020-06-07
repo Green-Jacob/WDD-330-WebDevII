@@ -203,4 +203,57 @@ if (filename.localeCompare("examples_week5.html") == 0){
     debugger;
     console.log(i);
   }
+}//end week 5
+
+//begin week 7
+if (filename.localeCompare("examples_week7.html") == 0){
+  function showReponse(obj) {
+    if (obj == null) {
+      return;
+    }
+    else
+    {
+      var str = "<h2>Weather in " + obj.name + ", " + obj.sys.country + "</h2>";
+      str += "Current Temperature:</br>";
+      str += "Temperature " + obj.main.temp + "</br>";
+      str += "Humidity " + obj.main.humidity + "</br>"
+      str += "Feels like " + obj.main.feels_like + "</br><hr>";
+      str += "Current Weather:</br>";
+      str += "Conditions: " + obj.weather[0].description + "</br>"
+      str += "Wind: " + obj.wind.speed + " mph </br>"
+      document.getElementById('response').innerHTML = str;
+    }
+  }
+
+  function convert(json) {
+    var obj = JSON.parse(json);
+    console.log(obj);
+    showReponse(obj);
+  }
+
+  function getWeather(search) {
+    //This API key is for a completely free service which has no billing information
+    //Zero risk in putting it in this file.
+    var url = "http://api.openweathermap.org/data/2.5/weather?APPID=6b208c0783e3933802dae752c93278a8"
+    if (isNaN(search)) {
+      url += "&q=" + search +"&units=imperial"
+    }
+    else {
+      url += "&zip=" + search +"&units=imperial"
+    }
+    fetch(url)
+    .then((response) => {
+        if(response.ok) {
+            return response;
+        }
+        throw Error(response.statusText);
+    })
+    .then( response => response.text() )
+    .then(text => convert(text))
+    .catch( error => document.getElementById('response').innerHTML = "Not found. Try again." )
+  }
+
+  document.getElementById('find').addEventListener("click", function(){
+    getWeather(document.getElementById('search').value);
+  });
 }
