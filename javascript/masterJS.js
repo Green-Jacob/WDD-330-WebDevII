@@ -234,7 +234,7 @@ if (filename.localeCompare("examples_week7.html") == 0){
   function getWeather(search) {
     //This API key is for a completely free service which has no billing information
     //Zero risk in putting it in this file.
-    var url = "http://api.openweathermap.org/data/2.5/weather?APPID=6b208c0783e3933802dae752c93278a8"
+    var url = "https://api.openweathermap.org/data/2.5/weather?APPID=6b208c0783e3933802dae752c93278a8"
     if (isNaN(search)) {
       url += "&q=" + search +"&units=imperial"
     }
