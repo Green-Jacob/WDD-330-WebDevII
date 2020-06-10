@@ -256,4 +256,10 @@ if (filename.localeCompare("examples_week7.html") == 0){
   document.getElementById('find').addEventListener("click", function(){
     getWeather(document.getElementById('search').value);
   });
-}
+}//end of week 7
+
+//beginning of week 8
+if (filename.localeCompare("examples_week8.html") == 0){
+  
+
+}//end of week 8
