@@ -260,6 +260,13 @@ if (filename.localeCompare("examples_week7.html") == 0){
 
 //beginning of week 8
 if (filename.localeCompare("examples_week8.html") == 0){
-  
-
+  document.getElementById('puppy').addEventListener('dragstart', function(event){
+    event.dataTransfer.setData("text/plain", this.id); //useful but not used in this example
+  });
+  document.getElementById('doghouse').addEventListener("dragover", function(event){
+    event.preventDefault();
+    var pup = document.getElementById('puppy');
+    puppy.parentNode.removeChild(pup);
+    document.getElementById('dog').innerHTML = "<h2>Puppy went to bed.</h2>"
+  });
 }//end of week 8
