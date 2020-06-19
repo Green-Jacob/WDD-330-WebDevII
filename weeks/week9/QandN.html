@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jacob Green Week 8</title>
+    <link rel="stylesheet" href="../../master.css">
+  </head>
+  <body>
+    <div id="header">
+        <h1>Week 8 Questions and Notes</h1><br>
+    </div>
+    <div class="container">
+      <div class="box-med text">
+        <a href="../../index.html">Home</a>
+        <hr>
+        Questions:<br>
+        - Alerts dialogs stop other scripts. What are best practices for communicating
+        errors or success messages to the user? <br>
+      </div>
+      <div class="box-med text">
+        Notes:<br>
+        - window object acts as a place to store global variables <br>
+        - window.alert(), window.confirm(), and window.prompt() pauses any other scripts and waits
+        for user input <br>
+        - data attribute a way to add private data to an element for the sole purpose
+        of being accessed by that pages JavaScript <br>
+        - geolocation - where is the user? <br>
+        - worker class - a way to sort of let the script run seperate threads.
+        good for user experience so a page won't "hang" <br>
+        - Multimedia - video and audio tags for embedding media to the page <br>
+        - check the meta data is loaded before attempting to change values <br>
+        video.addEventListener('loadedmetadata', () => { console.log(video.duration); }); <br>
+      </div>
+    </div><!-- end container -->
+  </body>
+</html>

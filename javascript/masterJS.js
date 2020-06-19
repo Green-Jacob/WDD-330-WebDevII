@@ -270,3 +270,25 @@ if (filename.localeCompare("examples_week8.html") == 0){
     document.getElementById('dog').innerHTML = "<h2>Puppy went to bed.</h2>"
   });
 }//end of week 8
+
+//beginning of week 9
+if (filename.localeCompare("examples_week9.html") == 0){
+  var n = 1;
+  function counter() {
+    document.getElementById('count').innerHTML = n;
+    n++;
+  }
+  function run() {
+    setInterval(counter, 500);
+  }
+  document.body.addEventListener('load', run());
+  document.getElementById('showAlert').addEventListener('click', function(){
+    window.alert("The timer will not advance. Now close this box.");
+  });
+  document.getElementById('showPrompt').addEventListener('click', function(){
+    n = parseInt(window.prompt("The timer will not advance. Enter a number."));
+  });
+  document.getElementById('showConfirm').addEventListener('click', function(){
+    window.confirm("The timer will not advance. Now close this box.");
+  });
+}//end of week 9
