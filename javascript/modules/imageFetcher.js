@@ -1,8 +1,6 @@
 export default class imageFetcher{
   getData(data)
   {
-    debugger
-    console.log(data);
     return data.hits;
   }
   //free API key, secure to put into client side JS
