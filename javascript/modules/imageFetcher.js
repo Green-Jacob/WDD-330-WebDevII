@@ -13,5 +13,6 @@ export default class imageFetcher{
       .catch((error) => {
         console.log('Error:', error);
       })
+      return obj;
   }
 }
