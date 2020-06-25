@@ -292,3 +292,37 @@ if (filename.localeCompare("examples_week9.html") == 0){
     window.confirm("The timer will not advance. Now close this box.");
   });
 }//end of week 9
+
+//beginning of week 10
+if (filename.localeCompare("examples_week10.html") == 0){
+  var email = document.getElementById('mail');
+  var nickName = document.getElementById('nickName');
+  var age = document.getElementById('age')
+  email.addEventListener('change', function(event) {
+    var notice = document.getElementById('email_error')
+    if (email.validity.typeMismatch) {
+      notice.innerHTML = "Need a valid email"
+    }
+    else {
+      notice.innerHTML = ""
+    }
+  });
+  nickName.addEventListener('change', function(event) {
+    var notice = document.getElementById('name_error')
+    if (nickName.validity.tooShort) {
+      notice.innerHTML = "Need name at least 8 characters long."
+    }
+    else {
+      notice.innerHTML = ""
+    }
+  });
+  age.addEventListener('change', function(event) {
+    var notice = document.getElementById('age_error')
+    if (age.validity.rangeOverflow || age.validity.rangeUnderflow) {
+      notice.innerHTML = "Ages 18-101"
+    }
+    else {
+      notice.innerHTML = ""
+    }
+  });
+}//end week 10
