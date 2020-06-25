@@ -18,6 +18,6 @@ export default class imageFetcher{
       .catch((error) => {
         console.log('Error:', error);
       })
-      console.log(a);
+      console.log(this.a);
   }
 }
