@@ -6,7 +6,7 @@ export default class imageFetcher{
     var search = url + "&q=" + string;
     fetch(search)
       .then(response => response.json())
-      .then(data => function(data){
+      .then(data => function(){
         console.log(data)
         obj = data.hits
       })
