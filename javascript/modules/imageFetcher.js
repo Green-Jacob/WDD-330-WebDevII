@@ -7,7 +7,8 @@ export default class imageFetcher{
     fetch(search)
       .then(response => response.json())
       .then(data => function(data){
-        console.log(data);
+        console.log(data)
+        obj = data.hits
       })
       .catch((error) => {
         console.log('Error:', error);
