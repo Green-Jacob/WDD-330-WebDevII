@@ -10,6 +10,7 @@ export default class imageFetcher{
       .then(data => function(){
         console.log(data)
         a = data.hits
+        debugger
       })
       .catch((error) => {
         console.log('Error:', error);
