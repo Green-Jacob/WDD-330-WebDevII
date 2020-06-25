@@ -1,5 +1,5 @@
 import imageFetcher from "./modules/imageFetcher.js";
-document.body.addEventListener('load', function(){
+document.getElementById('button').addEventListener('click', function(){
   fetcher = new imageFetcher;
   fetcher.requestImage("yellow+flower");
 });
