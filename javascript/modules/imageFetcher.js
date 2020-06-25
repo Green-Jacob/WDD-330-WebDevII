@@ -15,6 +15,6 @@ export default class imageFetcher{
       .catch((error) => {
         console.log('Error:', error);
       })
-      return a;
+      console.log(a);
   }
 }
