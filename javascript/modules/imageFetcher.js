@@ -3,8 +3,8 @@ export default class imageFetcher{
   {
     var string = ""
     for (var i = 0; i < 3; i++) {
-      var i = Math.floor(Math.random() * data.hits.length);
-      var iURL = data.hits[i].webformatURL;
+      var n = Math.floor(Math.random() * data.hits.length);
+      var iURL = data.hits[n].webformatURL;
       string += "<img src='" + iURL + "'alt=''></br>"
     }
     element.innerHTML = string;
