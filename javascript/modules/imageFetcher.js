@@ -5,7 +5,7 @@ export default class imageFetcher{
     for (var i = 0; i < 3; i++) {
       var i = Math.floor(Math.random() * data.hits.length);
       var iURL = data.hits[i].webformatURL;
-      string += "<img src=" + iURL + " alt="">"
+      string += "<img src='" + iURL + "'alt=''>"
     }
     element.innerHTML = string;
   }
