@@ -1,4 +1,9 @@
 export default class imageFetcher{
+  getData(data)
+  {
+    debugger
+    console.log(data);
+  }
   //free API key, secure to put into client side JS
   requestImage(string)
   {
@@ -7,11 +12,7 @@ export default class imageFetcher{
     var a
     fetch(search)
       .then(response => response.json())
-      .then(data => function(){
-        console.log(data)
-        a = data.hits
-        debugger
-      })
+      .then(data => getData(data))
       .catch((error) => {
         console.log('Error:', error);
       })
