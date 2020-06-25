@@ -3,5 +3,5 @@ const fetcher = new imageFetcher;
 document.getElementById('button').addEventListener('click', function(){
   var obj
   fetcher.requestImage("yellow+flower", obj)
-  (console.log(obj)
+  console.log(obj)
 });
