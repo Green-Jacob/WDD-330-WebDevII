@@ -7,5 +7,7 @@ export default class imageFetcher{
     fetch(search)
       .then(response => response.json())
       .then(data => console.log(data));
-  }
+      .catch((error) => {
+        console.error('Error:', error);
+      }
 }
