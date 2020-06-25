@@ -14,7 +14,7 @@ export default class imageFetcher{
     var search = url + "&q=" + string;
     fetch(search)
       .then(response => response.json())
-      .then(data => a = this.getData(data))
+      .then(data => this.a = this.getData(data))
       .catch((error) => {
         console.log('Error:', error);
       })
