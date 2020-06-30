@@ -8,8 +8,11 @@ export default class storageManager {
       for (var i = 0; i < value.length; i++) {
         string += JSON.stringify(value[i]);
       }
+      localStorage.setItem(key, string);
     }
-    localStorage.setItem(key, string);
+    else {
+      localStorage.setItem(key, value);
+    }
   }
 
 //gets an item from local storage
@@ -37,5 +40,8 @@ export default class storageManager {
       emptyList.push(newLi);
       return emptyList;
     }
+  }
+  getImage(key){
+    return localStorage.getItem(key);
   }
 }
