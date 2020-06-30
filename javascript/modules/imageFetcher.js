@@ -1,16 +1,23 @@
+import storageManager from "./modules/ls.js"
 export default class imageFetcher{
   getData(data, element)
   {
+    var storage = new storageManager;
     var string = ""
     for (var i = 0; i < 3; i++) {
       var n = Math.floor(Math.random() * data.hits.length);
+      var r = Math.floor(Math.random() * 4);
       var iURL = data.hits[n].webformatURL;
       string += "<img src='" + iURL + "'alt=''></br>"
+      storage.put("option" + toString(i + 1), string)
+      if (i = r)
+      {
+        storage.put("match", string);
+      }
     }
-    element.innerHTML = string;
   }
   //free API key, secure to put into client side JS
-  requestImage(element)
+  requestImage()
   {
     const searches = [
       "yellow+flower",
@@ -31,7 +38,7 @@ export default class imageFetcher{
     var search = url + "&q=" + string;
     fetch(search)
       .then(response => response.json())
-      .then(data => this.getData(data, element))
+      .then(data => this.getData(data))
       .catch((error) => {
         console.log('Error:', error);
       })
