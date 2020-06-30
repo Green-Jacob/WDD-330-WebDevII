@@ -30,7 +30,7 @@ export default class imageFetcher{
   requestImage(element)
   {
     var url = "https://pixabay.com/api/?key=17090702-3e1393b7e7a169d0b54bf7628&safesearch=true";
-    var string = Math.floor(Math.random() * searches.length);
+    var string = Math.floor(Math.random() * this.searches.length);
     var search = url + "&q=" + string;
     fetch(search)
       .then(response => response.json())
