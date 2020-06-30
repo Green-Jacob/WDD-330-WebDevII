@@ -43,7 +43,7 @@ export default class storageManager {
   }
 
   putImage(key, value){
-    localStorage.setItem(key, value);
+    return localStorage.setItem(key, value);
   }
 
   getImage(key){
