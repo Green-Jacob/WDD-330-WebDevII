@@ -1,5 +1,5 @@
 export default class imageFetcher{
-  const searches = [
+  searches = [
     "yellow+flower",
     "red+car",
     "orange+toy",
