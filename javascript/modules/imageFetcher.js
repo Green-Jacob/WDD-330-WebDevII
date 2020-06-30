@@ -5,8 +5,8 @@ export default class imageFetcher{
     var storage = new storageManager;
     var string = ""
     var r = Math.floor(Math.random() * 4);
+    var n = Math.floor(Math.random() * data.hits.length)
     for (var i = 0; i < 3; i++) {
-      var n = Math.floor(Math.random() * data.hits.length)
       var iURL = data.hits[n].webformatURL
       string = "<img src='" + iURL + "'alt=''></br>"
       var option = "option" + (i + 1);
@@ -15,6 +15,9 @@ export default class imageFetcher{
         storage.putImage("match", string)
       }
       storage.putImage(option, string)
+      while (n != n) {
+        n = Math.floor(Math.random() * data.hits.length)
+      }
     }
   }
   //free API key, secure to put into client side JS
