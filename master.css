@@ -83,6 +83,11 @@ button{
   max-width: 15%;
 }
 
+img{
+  max-width: 250 px;
+  max-height: 250 px;
+}
+
 .footer-contents{
   background-image: linear-gradient(to bottom right, green, #b3fff0);
   background-attachment: scroll;
