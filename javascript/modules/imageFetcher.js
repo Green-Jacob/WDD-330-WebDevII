@@ -4,17 +4,17 @@ export default class imageFetcher{
   {
     var storage = new storageManager;
     var string = ""
+    var r = Math.floor(Math.random() * 4);
     for (var i = 0; i < 3; i++) {
-      var n = Math.floor(Math.random() * data.hits.length);
-      var r = Math.floor(Math.random() * 4);
-      var iURL = data.hits[n].webformatURL;
+      var n = Math.floor(Math.random() * data.hits.length)
+      var iURL = data.hits[n].webformatURL
       string += "<img src='" + iURL + "'alt=''></br>"
       var option = "option" + (i + 1);
       debugger
       storage.putImage(option, string)
       if (i = r)
       {
-        storage.putImage("match", string);
+        storage.putImage("match", string)
       }
     }
   }
