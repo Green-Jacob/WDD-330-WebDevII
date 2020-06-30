@@ -10,7 +10,6 @@ export default class imageFetcher{
       var iURL = data.hits[n].webformatURL
       string += "<img src='" + iURL + "'alt=''></br>"
       var option = "option" + (i + 1);
-      debugger
       storage.putImage(option, string)
       if (i = r)
       {
@@ -36,7 +35,6 @@ export default class imageFetcher{
     ]
     var url = "https://pixabay.com/api/?key=17090702-3e1393b7e7a169d0b54bf7628&safesearch=true";
     var string = searches[Math.floor(Math.random() * searches.length)];
-    debugger;
     var search = url + "&q=" + string;
     fetch(search)
       .then(response => response.json())
