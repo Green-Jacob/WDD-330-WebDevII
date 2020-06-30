@@ -9,7 +9,7 @@ export default class imageFetcher{
       var r = Math.floor(Math.random() * 4);
       var iURL = data.hits[n].webformatURL;
       string += "<img src='" + iURL + "'alt=''></br>"
-      var option = "option" + toString(i + 1);
+      var option = "option" + (i + 1);
       debugger
       storage.putImage(option, string)
       if (i = r)
