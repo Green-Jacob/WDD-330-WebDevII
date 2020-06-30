@@ -16,7 +16,7 @@ export default class imageFetcher{
       }
       storage.putImage(option, string)
       var previous = n;                 //make sure we don't get duplicates
-      while (previous != n) {
+      while (previous == n) {
         n = Math.floor(Math.random() * data.hits.length)
       }
     }
