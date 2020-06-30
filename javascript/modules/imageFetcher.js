@@ -41,6 +41,7 @@ export default class imageFetcher{
       .then(data => this.getData(data))
       .catch((error) => {
         console.log('Error:', error);
-      })
+      });
+    return "Good.";
   }
 }
