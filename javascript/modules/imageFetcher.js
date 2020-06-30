@@ -15,6 +15,7 @@ export default class imageFetcher{
       {
         storage.putImage("match", string)
       }
+      console.log("loop");
     }
   }
   //free API key, secure to put into client side JS
