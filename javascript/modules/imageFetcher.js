@@ -11,10 +11,10 @@ export default class imageFetcher{
       string += "<img src='" + iURL + "'alt=''></br>"
       var option = "option" + (i + 1);
       storage.putImage(option, string)
-      //if (i = r)
-      //{
-      //  storage.putImage("match", string)
-      //}
+      if (i == r)
+      {
+        storage.putImage("match", string)
+      }
       console.log("loop");
     }
   }
