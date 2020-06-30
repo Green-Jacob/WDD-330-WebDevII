@@ -5,6 +5,7 @@ export default class imageFetcher{
     var storage = new storageManager;
     var string = ""
     var r = Math.floor(Math.random() * 4);
+    debugger
     var n = Math.floor(Math.random() * data.hits.length)
     for (var i = 0; i < 3; i++) {
       var iURL = data.hits[n].webformatURL
