@@ -10,12 +10,11 @@ export default class imageFetcher{
       var iURL = data.hits[n].webformatURL
       string += "<img src='" + iURL + "'alt=''></br>"
       var option = "option" + (i + 1);
-      storage.putImage(option, string)
       if (i == r)
       {
         storage.putImage("match", string)
       }
-      console.log("loop");
+      storage.putImage(option, string)
     }
   }
   //free API key, secure to put into client side JS
