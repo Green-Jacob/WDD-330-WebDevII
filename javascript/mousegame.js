@@ -15,5 +15,5 @@ function showPictures() {
 
 document.getElementById('button').addEventListener('click', function(){
   fetcher.requestImage();
-  setTimeout(showPictures(), 2500);
+  setTimeout(showPictures(), 3500);
 });
