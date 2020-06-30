@@ -9,10 +9,10 @@ export default class imageFetcher{
       var r = Math.floor(Math.random() * 4);
       var iURL = data.hits[n].webformatURL;
       string += "<img src='" + iURL + "'alt=''></br>"
-      storage.put("option" + toString(i + 1), string)
+      storage.putImage("option" + toString(i + 1), string)
       if (i = r)
       {
-        storage.put("match", string);
+        storage.putImage("match", string);
       }
     }
   }
