@@ -1,4 +1,4 @@
-import storageManager from "./modules/ls.js"
+import storageManager from "./ls.js"
 export default class imageFetcher{
   getData(data, element)
   {
