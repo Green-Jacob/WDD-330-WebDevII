@@ -8,14 +8,15 @@ export default class imageFetcher{
     var n = Math.floor(Math.random() * data.hits.length)
     for (var i = 0; i < 3; i++) {
       var iURL = data.hits[n].webformatURL
-      string = "<img src='" + iURL + "'alt=''></br>"
+      var id = data.hits[n].id
+      string = "<img src='" + iURL + "'alt='" + id +"'></br>"
       var option = "option" + (i + 1);
       if (i == r)
       {
         storage.putImage("match", string)
       }
       storage.putImage(option, string)
-      var previous = n;                 //make sure we don't get duplicates
+      var previous = n;                 //help prevent duplicates
       while (previous == n) {
         n = Math.floor(Math.random() * data.hits.length)
       }
