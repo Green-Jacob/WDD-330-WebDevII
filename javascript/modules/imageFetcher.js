@@ -8,7 +8,7 @@ export default class imageFetcher{
     for (var i = 0; i < 3; i++) {
       var n = Math.floor(Math.random() * data.hits.length)
       var iURL = data.hits[n].webformatURL
-      string += "<img src='" + iURL + "'alt=''></br>"
+      string = "<img src='" + iURL + "'alt=''></br>"
       var option = "option" + (i + 1);
       if (i == r)
       {
