@@ -1,17 +1,21 @@
 export default class imageFetcher{
-  searches = [
-    "yellow+flower",
-    "red+car",
-    "orange+toy",
-    "fruit",
-    "fruit+bowl",
-    "green+frog",
-    "lion",
-    "blue+lake",
-    "NASA+rocket",
-    "brown+bear",
-    "panda+black"
-  ]
+  constructor()
+  {
+    const searches = [
+      "yellow+flower",
+      "red+car",
+      "orange+toy",
+      "fruit",
+      "fruit+bowl",
+      "green+frog",
+      "lion",
+      "blue+lake",
+      "NASA+rocket",
+      "brown+bear",
+      "panda+black"
+    ]
+  }
+
   getData(data, element)
   {
     var string = ""
