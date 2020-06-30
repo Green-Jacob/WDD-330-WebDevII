@@ -1,4 +1,17 @@
 export default class imageFetcher{
+  const searches = [
+    "yellow+flower",
+    "red+car",
+    "orange+toy",
+    "fruit",
+    "fruit+bowl",
+    "green+frog",
+    "lion",
+    "blue+lake",
+    "NASA+rocket",
+    "brown+bear",
+    "panda+black"
+  ]
   getData(data, element)
   {
     var string = ""
@@ -10,9 +23,10 @@ export default class imageFetcher{
     element.innerHTML = string;
   }
   //free API key, secure to put into client side JS
-  requestImage(string, element)
+  requestImage(element)
   {
     var url = "https://pixabay.com/api/?key=17090702-3e1393b7e7a169d0b54bf7628&safesearch=true";
+    var string = Math.floor(Math.random() * searches.length);
     var search = url + "&q=" + string;
     fetch(search)
       .then(response => response.json())
