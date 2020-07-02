@@ -14,10 +14,12 @@ export default class Game{
     if (option.getAttribute("value") == this.match.getAttribute("value"))
     {
       console.log("match!!");
+      return true;
     }
     else
     {
       console.log("nope!");
+      return false;
     }
   }
 
