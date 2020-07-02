@@ -26,7 +26,7 @@ export default class imageFetcher{
     }
   }
   //free API key, secure to put into client side JS
-  requestImage()
+  async requestImage()
   {
     const searches = [
       "yellow+flower",
