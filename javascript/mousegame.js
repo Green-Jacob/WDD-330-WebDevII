@@ -24,7 +24,6 @@ function beginGame()
 }
 
 document.getElementById('button').addEventListener('click', function(){
-  fetcher.requestImage();
-  setTimeout(function(){showPictures()}, 1000);
+  await fetcher.requestImage();
   beginGame();
 });
