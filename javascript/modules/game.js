@@ -7,12 +7,16 @@ export default class Game{
     this.opt3 = o3;
   }
 
-  click()
+  click(option)
   {
-    console.log(this.match);
-    console.log(this.opt1);
-    console.log(this.opt2);
-    console.log(this.opt3);
+    if (option.id == matcher.id)
+    {
+      console.log("match!!");
+    }
+    else
+    {
+      console.log("nope!");
+    }
   }
 
 }
