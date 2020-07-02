@@ -9,7 +9,7 @@ export default class Game{
 
   click(option)
   {
-    if (option.id == this.match.id)
+    if (option.value == this.match.value)
     {
       console.log("match!!");
     }
