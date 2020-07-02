@@ -11,13 +11,14 @@ export default class imageFetcher{
       var iURL = data.hits[n].webformatURL
       var id = data.hits[n].id
       var option = "option" + (i + 1);
-      string = "<img src='" + iURL + "'value='" + id +"' id='" + option + "'>"
+      string = "<img src='" + iURL + "'value='" + id +"'"
       if (i == r)
       {
-        var string2 = string.substring(0, string.length - 1);
+        var string2 = string;
         string2 += "class='matcherPicture'>"
         storage.putImage("match", string2)
       }
+      string+= "id='" + option + "'>"
       storage.putImage(option, string)
       var previous = n;                 //help prevent duplicates
       while (previous == n) {
