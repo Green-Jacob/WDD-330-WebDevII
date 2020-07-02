@@ -19,10 +19,10 @@ function beginGame()
   var o2 = document.getElementById('option2');
   var o3 = document.getElementById('option3');
   var m = document.getElementsByClassName('matcherPicture')[0];
-  var game = new Game(m.value, o1.value, o2.value, o3.value);
-  o1.addEventListener('click', function(){game.click(o1.value)});
-  o2.addEventListener('click', function(){game.click(o2.value)});
-  o3.addEventListener('click', function(){game.click(o3.value)});
+  var game = new Game(m, o1, o2, o3);
+  o1.addEventListener('click', function(){game.click(o1)});
+  o2.addEventListener('click', function(){game.click(o2)});
+  o3.addEventListener('click', function(){game.click(o3)});
 }
 
 document.getElementById('button').addEventListener('click', function(){
