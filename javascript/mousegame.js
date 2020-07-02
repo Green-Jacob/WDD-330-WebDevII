@@ -13,8 +13,13 @@ function showPictures() {
   document.getElementById('photoArea').innerHTML = photos;
 }
 
+function beginGame()
+{
+  document
+}
+
 document.getElementById('button').addEventListener('click', function(){
   fetcher.requestImage();
   setTimeout(function(){showPictures()}, 1000);
-  
+  beginGame();
 });
