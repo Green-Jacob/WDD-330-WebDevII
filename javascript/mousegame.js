@@ -1,6 +1,6 @@
 import imageFetcher from "./modules/imageFetcher.js";
 import storageManager from "./modules/ls.js"
-
+import Game from "./modules/game.js"
 const fetcher = new imageFetcher;
 const storage = new storageManager;
 
@@ -16,4 +16,5 @@ function showPictures() {
 document.getElementById('button').addEventListener('click', function(){
   fetcher.requestImage();
   setTimeout(function(){showPictures()}, 1000);
+  
 });
