@@ -10,8 +10,8 @@ export default class imageFetcher{
     for (var i = 0; i < 3; i++) {
       var iURL = data.hits[n].webformatURL
       var id = data.hits[n].id
-      string = "<img src='" + iURL + "'value='" + id +"'></br>"
       var option = "option" + (i + 1);
+      string = "<img src='" + iURL + "'value='" + id +"' id='" + option + "'></br>"
       if (i == r)
       {
         storage.putImage("match", string)
