@@ -20,6 +20,7 @@ function beginGame()
   var o3 = document.getElementById('option3');
   var m = document.getElementsByClassName('matcherPicture')[0];
   var game = new Game(m, o1, o2, o3);
+  game.click();
 }
 
 document.getElementById('button').addEventListener('click', function(){
