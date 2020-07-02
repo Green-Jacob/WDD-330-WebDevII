@@ -15,11 +15,11 @@ function showPictures() {
 
 function beginGame()
 {
-  var o1 = document.getElementById('option1');
-  var o2 = document.getElementById('option2');
-  var o3 = document.getElementById('option3');
-  var m = document.getElementsByClassName('matcherPicture')[0];
-  var game = new Game(m, o1, o2, o3);
+  var o1 = document.getElementById('option1').value;
+  var o2 = document.getElementById('option2').value;
+  var o3 = document.getElementById('option3').value;
+  var m = document.getElementsByClassName('matcherPicture')[0].value;
+  var game = new Game(m., o1, o2, o3);
   o1.addEventListener('click', function(){game.click(o1)});
   o2.addEventListener('click', function(){game.click(o2)});
   o3.addEventListener('click', function(){game.click(o3)});
