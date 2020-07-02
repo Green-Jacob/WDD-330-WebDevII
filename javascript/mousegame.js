@@ -24,6 +24,6 @@ function beginGame()
 }
 
 document.getElementById('button').addEventListener('click', function(){
-  await fetcher.requestImage();
+  var x = await fetcher.requestImage();
   beginGame();
 });
