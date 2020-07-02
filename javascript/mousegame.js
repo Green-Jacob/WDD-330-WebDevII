@@ -25,5 +25,5 @@ function beginGame()
 
 document.getElementById('button').addEventListener('click', function(){
   let retrieve = async function() { fetcher.requestImage(); }
-  retrieve().then((value) => beginGame())
+  retrieve().then((value) => showPictures(); beginGame();)
 });
