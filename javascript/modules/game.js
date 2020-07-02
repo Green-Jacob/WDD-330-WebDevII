@@ -9,9 +9,9 @@ export default class Game{
 
   click(option)
   {
-    console.log(option.value);
-    console.log(this.match.value);
-    if (option.value == this.match.value)
+    console.log(option);
+    console.log(this.match);
+    if (option == this.match)
     {
       console.log("match!!");
     }
