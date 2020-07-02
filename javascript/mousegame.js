@@ -23,7 +23,6 @@ function beginGame()
   o1.addEventListener('click', game.click(o1));
   o2.addEventListener('click', game.click(o2));
   o3.addEventListener('click', game.click(o3));
-  game.click();
 }
 
 document.getElementById('button').addEventListener('click', function(){
