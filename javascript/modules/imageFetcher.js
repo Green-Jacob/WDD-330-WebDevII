@@ -14,7 +14,7 @@ export default class imageFetcher{
       string = "<img src='" + iURL + "'value='" + id +"' id='" + option + "'>"
       if (i == r)
       {
-        string2 = string.substring(0, string.length - 1);
+        var string2 = string.substring(0, string.length - 1);
         string2 += "class='matcherPicture'>"
         storage.putImage("match", string2)
       }
