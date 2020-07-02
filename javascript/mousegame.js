@@ -18,7 +18,7 @@ function beginGame()
   var o1 = document.getElementById('option1');
   var o2 = document.getElementById('option2');
   var o3 = document.getElementById('option3');
-  var m = document.getElementsByClassName('matcherPicture')[0].value;
+  var m = document.getElementsByClassName('matcherPicture')[0];
   var game = new Game(m.value, o1.value, o2.value, o3.value);
   o1.addEventListener('click', function(){game.click(o1.value)});
   o2.addEventListener('click', function(){game.click(o2.value)});
