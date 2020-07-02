@@ -15,7 +15,11 @@ function showPictures() {
 
 function beginGame()
 {
-  document
+  var o1 = document.getElementById('option1');
+  var o2 = document.getElementById('option2');
+  var o3 = document.getElementById('option3');
+  var m = document.getElementsByClassName('matcherPicture')[0];
+  var game = new Game(m, o1, o2, o3);
 }
 
 document.getElementById('button').addEventListener('click', function(){
