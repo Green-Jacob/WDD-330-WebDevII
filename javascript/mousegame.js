@@ -20,6 +20,9 @@ function beginGame()
   var o3 = document.getElementById('option3');
   var m = document.getElementsByClassName('matcherPicture')[0];
   var game = new Game(m, o1, o2, o3);
+  o1.addEventListener('click', game.click(o1));
+  o2.addEventListener('click', game.click(o2));
+  o3.addEventListener('click', game.click(o3));
   game.click();
 }
 
