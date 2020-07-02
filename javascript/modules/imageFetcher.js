@@ -37,7 +37,7 @@ export default class imageFetcher{
       "fruit+bowl",
       "green+frog",
       "lion",
-      "blue+lake",
+      "bunny",
       "NASA+rocket",
       "brown+bear",
       "panda+black"
