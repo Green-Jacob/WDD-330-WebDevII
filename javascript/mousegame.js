@@ -15,7 +15,7 @@ function showPictures() {
   document.getElementById('photoArea').innerHTML = photos;
 }
 
-function beginGame()
+function beginClickGame()
 {
   var o1 = document.getElementById('option1');
   var o2 = document.getElementById('option2');
@@ -54,10 +54,49 @@ function beginGame()
   });
 }
 
+function beginDblClickGame()
+{
+  var o1 = document.getElementById('option1');
+  var o2 = document.getElementById('option2');
+  var o3 = document.getElementById('option3');
+  var m = document.getElementsByClassName('matcherPicture')[0];
+  var game = new Game(m, o1, o2, o3);
+  o1.addEventListener('dblclick', function(){
+    let result = game.click(o1);
+    if (result == true) {
+      retrieve().then((value) =>
+      {
+        showPictures();
+        beginGame();
+      });
+    }
+  });
+  o2.addEventListener('dblclick', function(){
+    let result = game.click(o2);
+    if (result == true) {
+      retrieve().then((value) =>
+      {
+        showPictures();
+        beginGame();
+      });
+    }
+  });
+  o3.addEventListener('dblclick', function(){
+    let result = game.click(o3);
+    if (result == true) {
+      retrieve().then((value) =>
+      {
+        showPictures();
+        beginGame();
+      });
+    }
+  });
+}
+
 document.getElementById('button').addEventListener('click', function(){
   retrieve().then((value) =>
   {
     showPictures();
-    beginGame();
+    beginDblClickGame();
   });
 });
