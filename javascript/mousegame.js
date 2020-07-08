@@ -93,7 +93,15 @@ function beginDblClickGame()
   });
 }
 
-document.getElementById('button').addEventListener('click', function(){
+document.getElementById('c_button').addEventListener('click', function(){
+  retrieve().then((value) =>
+  {
+    showPictures();
+    beginClickGame();
+  });
+});
+
+document.getElementById('dc_button').addEventListener('click', function(){
   retrieve().then((value) =>
   {
     showPictures();
