@@ -28,7 +28,7 @@ function beginClickGame()
       retrieve().then((value) =>
       {
         showPictures();
-        beginGame();
+        beginClickGame();
       });
     }
   });
@@ -38,7 +38,7 @@ function beginClickGame()
       retrieve().then((value) =>
       {
         showPictures();
-        beginGame();
+        beginClickGame();
       });
     }
   });
@@ -48,7 +48,7 @@ function beginClickGame()
       retrieve().then((value) =>
       {
         showPictures();
-        beginGame();
+        beginClickGame();
       });
     }
   });
@@ -67,7 +67,7 @@ function beginDblClickGame()
       retrieve().then((value) =>
       {
         showPictures();
-        beginGame();
+        beginDblClickGame();
       });
     }
   });
@@ -77,7 +77,7 @@ function beginDblClickGame()
       retrieve().then((value) =>
       {
         showPictures();
-        beginGame();
+        beginDblClickGame();
       });
     }
   });
@@ -87,7 +87,7 @@ function beginDblClickGame()
       retrieve().then((value) =>
       {
         showPictures();
-        beginGame();
+        beginDblClickGame();
       });
     }
   });
