@@ -105,18 +105,22 @@ function beginDragGame()
   o2.setAttribute('draggable', true);
   o3.setAttribute('draggable', true);
   o1.addEventListener('dragstart', function(event){
+    event.preventDefault();
     selected = this.getAttribute("value");
   });
   o2.addEventListener('dragstart', function(event){
+    event.preventDefault();
     selected = this.getAttribute("value");
   });
   o3.addEventListener('dragstart', function(event){
+    event.preventDefault();
     selected = this.getAttribute("value");
   });
   m.addEventListener('dragover', function(event){
       event.preventDefault();
     });
   m.addEventListener('drop', function(event){
+    event.preventDefault();
     var optionID = selected;
     var matched = false;
     if (optionID == o1.value)
