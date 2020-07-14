@@ -7,7 +7,7 @@ export default class Game{
     this.opt3 = o3;
   }
 
-  click(option)
+  check(option)
   {
     console.log(option.getAttribute("value"));
     console.log(this.match.getAttribute("value"));
