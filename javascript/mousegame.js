@@ -23,7 +23,7 @@ function beginClickGame()
   var m = document.getElementsByClassName('matcherPicture')[0];
   var game = new Game(m, o1, o2, o3);
   o1.addEventListener('click', function(){
-    let result = game.click(o1);
+    let result = game.check(o1);
     if (result == true) {
       retrieve().then((value) =>
       {
@@ -33,7 +33,7 @@ function beginClickGame()
     }
   });
   o2.addEventListener('click', function(){
-    let result = game.click(o2);
+    let result = game.check(o2);
     if (result == true) {
       retrieve().then((value) =>
       {
@@ -43,7 +43,7 @@ function beginClickGame()
     }
   });
   o3.addEventListener('click', function(){
-    let result = game.click(o3);
+    let result = game.check(o3);
     if (result == true) {
       retrieve().then((value) =>
       {
@@ -62,7 +62,7 @@ function beginDblClickGame()
   var m = document.getElementsByClassName('matcherPicture')[0];
   var game = new Game(m, o1, o2, o3);
   o1.addEventListener('dblclick', function(){
-    let result = game.click(o1);
+    let result = game.check(o1);
     if (result == true) {
       retrieve().then((value) =>
       {
@@ -72,7 +72,7 @@ function beginDblClickGame()
     }
   });
   o2.addEventListener('dblclick', function(){
-    let result = game.click(o2);
+    let result = game.check(o2);
     if (result == true) {
       retrieve().then((value) =>
       {
@@ -82,7 +82,7 @@ function beginDblClickGame()
     }
   });
   o3.addEventListener('dblclick', function(){
-    let result = game.click(o3);
+    let result = game.check(o3);
     if (result == true) {
       retrieve().then((value) =>
       {
@@ -90,6 +90,50 @@ function beginDblClickGame()
         beginDblClickGame();
       });
     }
+  });
+}
+
+function beginDragGame()
+{
+  var o1 = document.getElementById('option1');
+  var o2 = document.getElementById('option2');
+  var o3 = document.getElementById('option3');
+  var m = document.getElementsByClassName('matcherPicture')[0];
+  var game = new Game(m, o1, o2, o3);
+  o1.setAttribute('draggable', true);
+  o2.setAttribute('draggable', true);
+  o3.setAttribute('draggable', true);
+  o1.addEventListener('dragstart', function(event){
+    event.dataTransfer.setData("text/plain", this.value);
+  });
+  o2.addEventListener('dragstart', function(event){
+    event.dataTransfer.setData("text/plain", this.value);
+  });
+  o3.addEventListener('dragstart', function(event){
+    event.dataTransfer.setData("text/plain", this.value);
+  });
+  m.addEventListener('dragover', function(event){
+      event.preventDefault();
+    });
+  m.addEventListener('drop', function(event){
+    var optionID = event.originalEvent.dataTransfer.getData("text/plain");
+    if (optionID == o1.value)
+    {
+      game.check(o1);
+    }
+    else if (optionID == o2.value)
+    {
+      game.check(o2);
+    }
+    else
+    {
+      game.check(o3);
+    }
+    retrieve().then((value) =>
+    {
+      showPictures();
+      beginClickGame();
+    });
   });
 }
 
