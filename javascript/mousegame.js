@@ -105,13 +105,13 @@ function beginDragGame()
   o2.setAttribute('draggable', true);
   o3.setAttribute('draggable', true);
   o1.addEventListener('dragstart', function(event){
-    selected = this.value;
+    selected = this.getAttribute("value");
   });
   o2.addEventListener('dragstart', function(event){
-    selected = this.value;
+    selected = this.getAttribute("value");
   });
   o3.addEventListener('dragstart', function(event){
-    selected = this.value;
+    selected = this.getAttribute("value");
   });
   m.addEventListener('dragover', function(event){
       event.preventDefault();
