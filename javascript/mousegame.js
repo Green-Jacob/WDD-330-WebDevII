@@ -118,23 +118,27 @@ function beginDragGame()
     });
   m.addEventListener('drop', function(event){
     var optionID = selected;
+    var matched = false;
     if (optionID == o1.value)
     {
-      game.check(o1);
+      matched = game.check(o1);
     }
     else if (optionID == o2.value)
     {
-      game.check(o2);
+      matched = game.check(o2);
     }
     else
     {
-      game.check(o3);
+      matched = game.check(o3);
     }
-    retrieve().then((value) =>
+    if (matched == true)
     {
-      showPictures();
-      beginDragGame();
-    });
+      retrieve().then((value) =>
+      {
+        showPictures();
+        beginDragGame();
+      });
+    }
   });
 }
 
