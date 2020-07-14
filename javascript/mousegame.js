@@ -132,7 +132,7 @@ function beginDragGame()
     retrieve().then((value) =>
     {
       showPictures();
-      beginClickGame();
+      beginDragGame();
     });
   });
 }
@@ -150,5 +150,13 @@ document.getElementById('dc_button').addEventListener('click', function(){
   {
     showPictures();
     beginDblClickGame();
+  });
+});
+
+document.getElementById('dd_button').addEventListener('click', function(){
+  retrieve().then((value) =>
+  {
+    showPictures();
+    beginDragGame();
   });
 });
