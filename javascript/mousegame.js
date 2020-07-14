@@ -119,6 +119,7 @@ function beginDragGame()
   m.addEventListener('drop', function(event){
     var optionID = selected;
     var matched = false;
+    debugger;
     if (optionID == o1.value)
     {
       matched = game.check(o1);
