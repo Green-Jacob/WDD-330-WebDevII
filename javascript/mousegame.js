@@ -120,11 +120,11 @@ function beginDragGame()
     event.preventDefault();
     var optionID = selected;
     var matched = false;
-    if (optionID == o1.value)
+    if (optionID == o1.getAttribute("value"))
     {
       matched = game.check(o1);
     }
-    else if (optionID == o2.value)
+    else if (optionID == o2.getAttribute("value"))
     {
       matched = game.check(o2);
     }
