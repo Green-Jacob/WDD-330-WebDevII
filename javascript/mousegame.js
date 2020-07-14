@@ -99,24 +99,25 @@ function beginDragGame()
   var o2 = document.getElementById('option2');
   var o3 = document.getElementById('option3');
   var m = document.getElementsByClassName('matcherPicture')[0];
+  var selected = "";
   var game = new Game(m, o1, o2, o3);
   o1.setAttribute('draggable', true);
   o2.setAttribute('draggable', true);
   o3.setAttribute('draggable', true);
   o1.addEventListener('dragstart', function(event){
-    event.dataTransfer.setData("text/plain", this.value);
+    selected = this.value;
   });
   o2.addEventListener('dragstart', function(event){
-    event.dataTransfer.setData("text/plain", this.value);
+    selected = this.value;
   });
   o3.addEventListener('dragstart', function(event){
-    event.dataTransfer.setData("text/plain", this.value);
+    selected = this.value;
   });
   m.addEventListener('dragover', function(event){
       event.preventDefault();
     });
   m.addEventListener('drop', function(event){
-    var optionID = event.originalEvent.dataTransfer.getData("text/plain");
+    var optionID = selected;
     if (optionID == o1.value)
     {
       game.check(o1);
