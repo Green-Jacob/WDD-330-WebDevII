@@ -15,6 +15,24 @@ function showPictures() {
   document.getElementById('photoArea').innerHTML = photos;
 }
 
+function showResult(result, nextFunction)
+{
+  var message = document.getElementById('messageCenter');
+  if (result)
+  {
+    message.innerHTML = "<h3>Match! Now the next one.</h3>";
+    retrieve().then((value) =>
+    {
+      showPictures();
+      nextFunction();
+    });
+  }
+  else
+  {
+    message.innerHTML = "<h3>Try again. You can do it!</h3>"
+  }
+}
+
 function beginClickGame()
 {
   var o1 = document.getElementById('option1');
@@ -24,33 +42,15 @@ function beginClickGame()
   var game = new Game(m, o1, o2, o3);
   o1.addEventListener('click', function(){
     let result = game.check(o1);
-    if (result == true) {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginClickGame();
-      });
-    }
+    showResult(result, beginClickGame);
   });
   o2.addEventListener('click', function(){
     let result = game.check(o2);
-    if (result == true) {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginClickGame();
-      });
-    }
+    showResult(result, beginClickGame);
   });
   o3.addEventListener('click', function(){
     let result = game.check(o3);
-    if (result == true) {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginClickGame();
-      });
-    }
+    showResult(result, beginClickGame);
   });
 }
 
@@ -63,33 +63,16 @@ function beginDblClickGame()
   var game = new Game(m, o1, o2, o3);
   o1.addEventListener('dblclick', function(){
     let result = game.check(o1);
-    if (result == true) {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginDblClickGame();
-      });
-    }
+    showResult(result, beginDblClickGame);
   });
   o2.addEventListener('dblclick', function(){
     let result = game.check(o2);
-    if (result == true) {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginDblClickGame();
-      });
-    }
+    showResult(result, beginDblClickGame);
   });
   o3.addEventListener('dblclick', function(){
     let result = game.check(o3);
-    if (result == true) {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginDblClickGame();
-      });
-    }
+    showMessage(result);
+    showResult(result, beginDblClickGame);
   });
 }
 
@@ -132,15 +115,7 @@ function beginDragGame()
     {
       matched = game.check(o3);
     }
-    debugger;
-    if (matched == true)
-    {
-      retrieve().then((value) =>
-      {
-        showPictures();
-        beginDragGame();
-      });
-    }
+    showResult(matched, beginDragGame);
   });
 }
 
