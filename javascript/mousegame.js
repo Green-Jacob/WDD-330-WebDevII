@@ -20,9 +20,12 @@ function showPictures() {
 function showResult(result, nextFunction)
 {
   var message = document.getElementById('messageCenter');
+  var matches = document.getElementById('matchCount');
   if (result)
   {
     message.innerHTML = "<h3>Match! Now the next one.</h3>";
+    matchCounter++;
+    matches.innerHTML = matchCounter;
     retrieve().then((value) =>
     {
       showPictures();
