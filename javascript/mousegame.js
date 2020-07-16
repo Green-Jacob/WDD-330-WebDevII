@@ -120,6 +120,7 @@ function beginDragGame()
 }
 
 document.getElementById('c_button').addEventListener('click', function(){
+  document.getElementById('messageCenter').innerHTML = "Click the match.";
   retrieve().then((value) =>
   {
     showPictures();
@@ -128,6 +129,7 @@ document.getElementById('c_button').addEventListener('click', function(){
 });
 
 document.getElementById('dc_button').addEventListener('click', function(){
+  document.getElementById('messageCenter').innerHTML = "Double Click the match.";
   retrieve().then((value) =>
   {
     showPictures();
@@ -136,6 +138,7 @@ document.getElementById('dc_button').addEventListener('click', function(){
 });
 
 document.getElementById('dd_button').addEventListener('click', function(){
+  document.getElementById('messageCenter').innerHTML = "Drag and Drop the match.";
   retrieve().then((value) =>
   {
     showPictures();
