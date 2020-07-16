@@ -125,6 +125,7 @@ function beginDragGame()
 
 document.getElementById('c_button').addEventListener('click', function(){
   matchCounter = 0;
+  document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Click the match.";
   retrieve().then((value) =>
   {
@@ -135,6 +136,7 @@ document.getElementById('c_button').addEventListener('click', function(){
 
 document.getElementById('dc_button').addEventListener('click', function(){
   matchCounter = 0;
+  document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Double Click the match.";
   retrieve().then((value) =>
   {
@@ -145,6 +147,7 @@ document.getElementById('dc_button').addEventListener('click', function(){
 
 document.getElementById('dd_button').addEventListener('click', function(){
   matchCounter = 0;
+  document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Drag and Drop the match.";
   retrieve().then((value) =>
   {
