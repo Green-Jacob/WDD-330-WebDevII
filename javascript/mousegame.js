@@ -71,7 +71,6 @@ function beginDblClickGame()
   });
   o3.addEventListener('dblclick', function(){
     let result = game.check(o3);
-    showMessage(result);
     showResult(result, beginDblClickGame);
   });
 }
