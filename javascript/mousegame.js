@@ -44,7 +44,7 @@ function showResult(result, nextFunction)
     message.innerHTML = "<h3>Match! Now the next one.</h3>";
     matchCounter++;
     updateGoal();
-    matches.innerHTML = matchCounter + "out of " + goal;
+    matches.innerHTML = (matchCounter + " out of " + goal);
     retrieve().then((value) =>
     {
       showPictures();
