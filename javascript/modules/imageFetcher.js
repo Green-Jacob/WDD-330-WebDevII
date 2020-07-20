@@ -14,10 +14,10 @@ export default class imageFetcher{
       if (i == r)
       {
         var string2 = string;
-        string2 += "class='matcherPicture img-thumbnail'>"
+        string2 += "class='matcherPicture img-rounded'>"
         storage.putImage("match", string2)
       }
-      string += "class='img-thumbnail' "
+      string += "class='img-rounded' "
       string+= "id='" + option + "'>"
       storage.putImage(option, string)
       var previous = n;                 //help prevent duplicates
