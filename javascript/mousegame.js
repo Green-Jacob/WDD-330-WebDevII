@@ -144,6 +144,7 @@ document.getElementById('c_button').addEventListener('click', function(){
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Click the match.";
   setGoal();
+  updateGoal();
   retrieve().then((value) =>
   {
     showPictures();
@@ -156,6 +157,7 @@ document.getElementById('dc_button').addEventListener('click', function(){
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Double Click the match.";
   setGoal();
+  updateGoal();
   retrieve().then((value) =>
   {
     showPictures();
@@ -168,6 +170,7 @@ document.getElementById('dd_button').addEventListener('click', function(){
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Drag and Drop the match.";
   setGoal();
+  updateGoal();
   retrieve().then((value) =>
   {
     showPictures();
