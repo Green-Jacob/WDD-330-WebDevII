@@ -88,7 +88,7 @@ button{
   max-width: 15%;
 }
 
-img-thumbnail{
+.img-rounded{
   max-width: 250px;
   max-height: 250px;
 }
