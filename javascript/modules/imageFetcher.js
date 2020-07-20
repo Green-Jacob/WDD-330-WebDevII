@@ -14,9 +14,10 @@ export default class imageFetcher{
       if (i == r)
       {
         var string2 = string;
-        string2 += "class='matcherPicture'>"
+        string2 += "class='matcherPicture img-fluid'>"
         storage.putImage("match", string2)
       }
+      string += "class='img-fluid' "
       string+= "id='" + option + "'>"
       storage.putImage(option, string)
       var previous = n;                 //help prevent duplicates
