@@ -12,6 +12,10 @@ var goal = 0;
 function setGoal()
 {
   goal = parseInt(window.prompt("How many matches will you make?", "10"));
+  if (isNaN(goal))
+  {
+    goal = 10;
+  }
 }
 
 function updateGoal()
