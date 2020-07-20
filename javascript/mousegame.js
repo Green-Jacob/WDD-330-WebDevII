@@ -11,6 +11,8 @@ var goal = 0;
 
 function setGoal(string)
 {
+  goal = 0;
+  matchCounter = 0;
   goal = parseInt(window.prompt(string, "10"));
   if (isNaN(goal))
   {
