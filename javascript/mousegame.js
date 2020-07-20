@@ -9,9 +9,9 @@ let retrieve = async function() { fetcher.requestImage(); }
 var matchCounter = 0;
 var goal = 0;
 
-function setGoal()
+function setGoal(string)
 {
-  goal = parseInt(window.prompt("How many matches will you make?", "10"));
+  goal = parseInt(window.prompt(string, "10"));
   if (isNaN(goal))
   {
     goal = 10;
@@ -24,9 +24,9 @@ function updateGoal()
   var total = (matchCounter / goal) * 100;
   var string = "width: " + total + "%"
   bar.setAttribute("style", string);
-  if (matchCounter == goal)
+  if (matchCounter >= goal)
   {
-    setGoal();
+    setGoal("You did it! Now set a new goal.");
   }
 }
 
@@ -150,7 +150,7 @@ document.getElementById('c_button').addEventListener('click', function(){
   matchCounter = 0;
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Click the match.";
-  setGoal();
+  setGoal("How many matches will you make?");
   updateGoal();
   retrieve().then((value) =>
   {
@@ -163,7 +163,7 @@ document.getElementById('dc_button').addEventListener('click', function(){
   matchCounter = 0;
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Double Click the match.";
-  setGoal();
+  setGoal("How many matches will you make?");
   updateGoal();
   retrieve().then((value) =>
   {
@@ -176,7 +176,7 @@ document.getElementById('dd_button').addEventListener('click', function(){
   matchCounter = 0;
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Drag and Drop the match.";
-  setGoal();
+  setGoal("How many matches will you make?");
   updateGoal();
   retrieve().then((value) =>
   {
