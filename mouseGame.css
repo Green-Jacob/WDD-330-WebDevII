@@ -91,6 +91,7 @@ button{
 .img-rounded{
   min-width: 250px;
   min-height: 250px;
+  margin: 15px;
 }
 
 .footer-contents{
