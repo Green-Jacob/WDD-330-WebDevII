@@ -16,6 +16,10 @@ function setGoal()
 
 function updateGoal()
 {
+  if (matchCounter == goal)
+  {
+    setGoal();
+  }
   var bar = document.getElementsByClassName('progress-bar')[0];
   var total = (matchCounter / goal) * 100;
   var string = "width: " + total + "%"
