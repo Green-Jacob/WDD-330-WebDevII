@@ -23,7 +23,7 @@ body{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 95%;
+  min-width: 95%;
   padding-left: 15%;
   background-color: rgba(230, 242, 255, 0.5);
   border: 3px ridge #cce6ff;
