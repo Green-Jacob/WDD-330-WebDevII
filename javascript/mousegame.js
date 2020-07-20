@@ -7,6 +7,20 @@ const storage = new storageManager;
 let retrieve = async function() { fetcher.requestImage(); }
 
 var matchCounter = 0;
+var goal = 0;
+
+function setGoal()
+{
+  goal = parseInt(window.prompt("How many matches will you make?"));
+}
+
+function updateGoal()
+{
+  var bar = document.getElementsByClassName('progress-bar')[0];
+  var total = matchCounter / goal;
+  var string = "'width: " + total + "%' "
+  bar.setAttribute("style", string);
+}
 
 function showPictures() {
   var matcher = storage.getImage("match");
@@ -25,6 +39,7 @@ function showResult(result, nextFunction)
   {
     message.innerHTML = "<h3>Match! Now the next one.</h3>";
     matchCounter++;
+    updateGoal();
     matches.innerHTML = matchCounter;
     retrieve().then((value) =>
     {
@@ -127,6 +142,7 @@ document.getElementById('c_button').addEventListener('click', function(){
   matchCounter = 0;
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Click the match.";
+  setGoal();
   retrieve().then((value) =>
   {
     showPictures();
@@ -138,6 +154,7 @@ document.getElementById('dc_button').addEventListener('click', function(){
   matchCounter = 0;
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Double Click the match.";
+  setGoal();
   retrieve().then((value) =>
   {
     showPictures();
@@ -149,6 +166,7 @@ document.getElementById('dd_button').addEventListener('click', function(){
   matchCounter = 0;
   document.getElementById('matchCount').innerHTML = matchCounter;
   document.getElementById('messageCenter').innerHTML = "Drag and Drop the match.";
+  setGoal();
   retrieve().then((value) =>
   {
     showPictures();
